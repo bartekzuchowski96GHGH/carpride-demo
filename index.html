@@ -1,1 +1,1439 @@
-<!doctype html><html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#101014"><title>CarpRide Club — Demo</title><style>*{box-sizing:border-box}body{margin:0;background:#101014;color:#f7f7f7;font:15px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}main{max-width:520px;margin:auto;padding:18px 18px 100px}header{display:flex;justify-content:space-between;align-items:center;margin:5px 0 25px}.brand{font-size:27px;font-weight:950;font-style:italic;letter-spacing:1px}.brand span,.red{color:#e12631}.sub{font-size:10px;color:#aaa;letter-spacing:1px}.tag{border:1px solid #e12631;color:#e12631;padding:8px;border-radius:6px;font-size:11px;font-weight:800}.hero{padding:25px 22px;border-radius:18px;background:linear-gradient(130deg,#382428,#18191e);border:1px solid #493035;position:relative;overflow:hidden}.eyebrow{font-size:10px;letter-spacing:2px;color:#ff8a90;font-weight:800}.hero h1{font-size:32px;line-height:1.12;margin:15px 0}.hero p{color:#ccc;line-height:1.55;max-width:260px}.hero:after{content:'🎣';font-size:100px;position:absolute;right:-5px;bottom:4px;opacity:.13;pointer-events:none}button{border:0;cursor:pointer;font:inherit}.primary{background:#e12631;color:white;border-radius:9px;padding:14px 18px;font-weight:800;margin-top:12px}.section{display:flex;align-items:center;justify-content:space-between;margin:26px 0 12px}.section h2{font-size:19px;margin:0}.panel{background:#1d1d22;border:1px solid #34343a;border-radius:15px;padding:19px;margin:12px 0}.muted{color:#aaa;font-size:12px;line-height:1.6}.small{font-size:10px;letter-spacing:1.2px;font-weight:800}.points{font-size:39px;font-weight:900;margin:8px 0}.points small{font-size:13px;color:#e12631}.track{background:#393940;border-radius:20px;height:7px;overflow:hidden;margin-top:20px}.fill{height:100%;background:#e12631;width:0}.promo{display:flex;align-items:center;gap:14px}.stripe{background:#e12631;width:5px;align-self:stretch;border-radius:4px}.promo h3{margin:6px 0}.arrow{font-size:28px;color:#e12631;margin-left:auto}.card{background:linear-gradient(140deg,#e12631,#8f101a);border-radius:18px;padding:23px;min-height:240px;display:flex;flex-direction:column;justify-content:space-between}.card .points{margin:10px 0 0}.cardtop,.cardbottom{display:flex;justify-content:space-between;align-items:center}.card .muted{color:#ffdddd}.field{width:100%;padding:15px;border-radius:9px;border:1px solid #444;background:#202026;color:white;font-size:17px}.secondary{padding:13px;background:transparent;color:#eee;border:1px solid #666;border-radius:8px;margin-top:12px}.nav{position:fixed;bottom:0;left:0;right:0;background:#19191e;border-top:1px solid #333;display:flex;justify-content:center;padding:10px 5px calc(12px + env(safe-area-inset-bottom))}.nav-inner{width:min(520px,100%);display:flex}.nav button{width:25%;background:none;color:#aaa;font-size:11px;padding:5px}.nav button b{display:block;font-size:24px;margin-bottom:3px}.nav button.active{color:#ff4a53}.hidden{display:none}.title{font-size:29px;margin:5px 0 8px}.foot{font-size:11px;color:#777;margin-top:25px}.row{display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid #333}.logo{max-width:170px;max-height:90px;object-fit:contain;display:block;margin:0 auto 12px}</style></head><body><main><header><div><div class="brand">CARP<span>RIDE</span></div><div class="sub">WĘDKARSKI PROGRAM LOJALNOŚCIOWY</div></div><div class="tag">CLUB</div></header><section id="start"><div class="hero"><div class="eyebrow">WITAJ W CARPRIDE CLUB</div><h1>Więcej punktów.<br>Więcej korzyści.</h1><p>Zbieraj punkty za zakupy i korzystaj z ofert dla wędkarzy.</p><button class="primary" onclick="show('karta')">MOJA KARTA →</button></div><div class="section"><h2>Twoje punkty</h2><span class="muted">SALDO</span></div><div class="panel" onclick="show('karta')"><div class="small muted">DOSTĘPNE PUNKTY</div><div class="points"><span data-points></span> <small>PKT</small></div><div class="small red" data-level></div><div class="track"><div class="fill" data-progress></div></div><p class="muted" data-next></p></div><div class="section"><h2>Aktualności i promocje</h2><button class="red" style="background:none;font-size:11px" onclick="show('promocje')">WSZYSTKIE →</button></div><div class="panel promo" onclick="show('promocje')"><div class="stripe"></div><div><div class="small red">OKAZJA</div><h3>Przynęty karpiowe</h3><div class="muted">Sprawdź aktualne promocje.</div></div><div class="arrow">›</div></div><div class="panel promo" onclick="show('promocje')"><div class="stripe"></div><div><div class="small red">NOWOŚĆ</div><h3>Sezon nad wodą</h3><div class="muted">Nowy sprzęt w ofercie.</div></div><div class="arrow">›</div></div></section><section id="karta" class="hidden"><h1 class="title">Karta CarpRide</h1><p class="muted">Twoja cyfrowa karta klubowa — podgląd demonstracyjny.</p><div class="card"><div class="cardtop"><b class="brand">CARPRIDE</b><span class="small">CLUB MEMBER</span></div><div><div class="points"><span data-points></span> <small style="color:white">PKT</small></div><div class="small" style="color:#ffdddd">TWOJE AKTUALNE SALDO</div></div><div class="cardbottom"><span class="small">KARTA LOJALNOŚCIOWA</span><span class="small">DEMO 0001</span></div></div><div class="panel"><h3>Jak zbierać punkty?</h3><p class="muted">1 zł wydane w sklepie = 1 punkt. W wersji demo możesz testować dodawanie punktów w panelu sprzedawcy.</p></div><div class="panel"><h3>Poziom członkostwa</h3><div class="red" data-level></div><p class="muted" data-next></p></div></section><section id="promocje" class="hidden"><h1 class="title">Promocje</h1><p class="muted">Przykładowe oferty CarpRide Club.</p><div class="panel"><div class="small red">OKAZJA</div><h2>🎯 Przynęty karpiowe</h2><p class="muted">Sprawdź aktualne ceny kulek i pelletów.</p><hr style="border:0;border-top:1px solid #333"><div class="red small">OFERTA DEMONSTRACYJNA</div></div><div class="panel"><div class="small red">NOWOŚĆ</div><h2>🐟 Sezon nad wodą</h2><p class="muted">Nowości sprzętowe już dostępne w sklepie.</p><hr style="border:0;border-top:1px solid #333"><div class="red small">OFERTA DEMONSTRACYJNA</div></div></section><section id="konto" class="hidden"><img class="logo" src="logo.jpg" alt="Logo CarpRide"><h1 class="title">Moje konto</h1><div class="panel"><h3>👤 Gość CarpRide</h3><p class="muted">Konto demonstracyjne</p></div><div class="row">Dane i bezpieczeństwo <span>›</span></div><div class="row">Regulamin programu <span>›</span></div><div class="row">Kontakt ze sklepem <span>›</span></div><button class="primary" onclick="show('admin')">PANEL SPRZEDAWCY · DEMO</button><p class="foot">Logowanie SMS i prawdziwe konta dodamy w kolejnej wersji.</p></section><section id="admin" class="hidden"><button class="secondary" onclick="show('konto')">← WRÓĆ</button><h1 class="title" style="margin-top:25px">Panel sprzedawcy</h1><p class="muted">Testuj naliczanie punktów. Zmiany pozostają tylko w tym podglądzie.</p><div class="panel"><div class="small muted">SALDO KONTA TESTOWEGO</div><div class="points"><span data-points></span> <small>PKT</small></div></div><label class="small muted" for="amount">WARTOŚĆ ZAKUPÓW (ZŁ)</label><input id="amount" class="field" inputmode="decimal" value="100" style="margin-top:10px"><button class="primary" onclick="addPoints()" style="width:100%">DODAJ PUNKTY</button><button class="secondary" onclick="points=0;update()" style="width:100%">RESETUJ DEMO</button><p class="foot">Bez połączenia z Subiektem GT. Nie obsługuj tu prawdziwych transakcji.</p></section><p class="foot">CarpRide • wersja demonstracyjna • dane przykładowe</p></main><nav class="nav"><div class="nav-inner"><button data-tab="start" onclick="show('start')"><b>⌂</b>Start</button><button data-tab="karta" onclick="show('karta')"><b>▣</b>Karta</button><button data-tab="promocje" onclick="show('promocje')"><b>％</b>Promocje</button><button data-tab="konto" onclick="show('konto')"><b>☻</b>Konto</button></div></nav><script>let points=350;const levels=[['Wędkarz',0],['Karpiarz',500],['Specjalista',1500],['Mistrz Łowiska',3000],['CarpRide Legend',6000]];function update(){document.querySelectorAll('[data-points]').forEach(e=>e.textContent=points.toLocaleString('pl-PL'));let current=levels[0],next=null;for(let i=0;i<levels.length;i++){if(points>=levels[i][1])current=levels[i];else{next=levels[i];break}}document.querySelectorAll('[data-level]').forEach(e=>e.textContent='POZIOM: '+current[0].toUpperCase());document.querySelectorAll('[data-next]').forEach(e=>e.textContent=next?`${next[1]-points} pkt do poziomu ${next[0]}`:'Najwyższy poziom!');document.querySelectorAll('[data-progress]').forEach(e=>e.style.width=next?`${100*(points-current[1])/(next[1]-current[1])}%`:'100%')}function show(tab){document.querySelectorAll('main section').forEach(e=>e.classList.toggle('hidden',e.id!==tab));document.querySelectorAll('[data-tab]').forEach(e=>e.classList.toggle('active',e.dataset.tab===tab));scrollTo(0,0)}function addPoints(){let n=Number(document.getElementById('amount').value.replace(',','.'));if(!Number.isFinite(n)||n<=0){alert('Wpisz prawidłową kwotę.');return}points+=Math.floor(n);update();alert('Dodano '+Math.floor(n)+' punktów (demo).')}update();show('start')</script></body></html>
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#101014">
+<title>CarpRide Club — interaktywne demo v2</title>
+<style>
+:root{--bg:#101014;--surface:#1c1c21;--surface2:#25252c;--border:#393940;--red:#e12631;--red2:#ff5b64;--txt:#f7f7f8;--muted:#afb0ba;--green:#72d6a2;--gold:#efc96e;--warn:#f1c47e;--radius:17px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--txt);font:15px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.48}input,select,textarea{accent-color:var(--red)}main{max-width:580px;margin:0 auto;padding:18px 17px 112px}header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:5px 0 24px}.brand{font-size:28px;font-weight:950;font-style:italic;letter-spacing:.4px;white-space:nowrap}.brand span,.red{color:var(--red2)}.sub{color:var(--muted);font-size:10px;letter-spacing:1px}.tag{border:1px solid var(--red);color:var(--red2);font-size:10px;font-weight:850;border-radius:7px;padding:7px 10px}.hero{padding:25px 22px;border-radius:19px;background:linear-gradient(135deg,#44232b,#1c1c22 75%);border:1px solid #56343e;position:relative;overflow:hidden}.hero:after{content:'🎣';position:absolute;bottom:0;right:-3px;font-size:95px;opacity:.13;pointer-events:none}.hero .eyebrow{color:#ff969d;font-size:10px;letter-spacing:1.9px;font-weight:850}.hero h1{font-size:31px;line-height:1.08;margin:14px 0}.hero p{color:#ded4d7;max-width:300px;margin:0 0 8px}.primary,.secondary,.ghost,.danger-btn{border-radius:10px;padding:13px 16px;font-weight:800;min-height:45px;display:inline-flex;align-items:center;justify-content:center;gap:8px}.primary{color:white;background:var(--red);border:1px solid var(--red)}.primary:hover:not(:disabled){background:#bd1924}.secondary{background:#292931;color:#f8f8f9;border:1px solid #55545d}.ghost{background:transparent;color:#f2f2f5;border:1px solid #575761}.danger-btn{background:transparent;color:#ff8189;border:1px solid #8b3a43}.tiny-btn{border:1px solid #5e5d66;background:#292931;color:white;padding:8px 11px;border-radius:8px;font-size:12px;font-weight:700}.link-btn{border:none;color:var(--red2);background:none;padding:7px 0;font-size:12px;font-weight:850}.block{width:100%}.mt8{margin-top:8px}.mt12{margin-top:12px}.mt16{margin-top:16px}.mb8{margin-bottom:8px}.section{display:flex;align-items:center;justify-content:space-between;gap:15px;margin:24px 0 10px}.section h2{margin:0;font-size:19px}.panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:17px;margin:11px 0}.muted{color:var(--muted)}.small{font-size:11px}.xs{font-size:10px}.strong{font-weight:800}.label{font-size:11px;font-weight:850;letter-spacing:.8px;text-transform:uppercase;color:var(--muted)}.value{font-size:38px;font-weight:900;line-height:1.05;letter-spacing:-1px}.value .suffix{font-size:15px;font-weight:700;color:var(--red2)}.fine{font-size:11px;color:var(--muted);line-height:1.55}.row{display:flex;align-items:center;justify-content:space-between;gap:12px}.grow{flex:1;min-width:0}.chip{display:inline-flex;align-items:center;gap:5px;border:1px solid #5a454a;border-radius:999px;padding:5px 9px;background:#3b262b;color:#ffa2a8;font-size:11px;font-weight:750}.chip.gray{background:#292931;border-color:#4b4b56;color:#d9d9df}.chip.green{background:#1f3930;border-color:#326e51;color:#b1f0d0}.chip.gold{background:#383024;border-color:#7b6438;color:#f5d490}.chip.wrap{white-space:normal}.title{font-size:28px;margin:0 0 6px;font-weight:850}.page-intro{font-size:13px;color:var(--muted);margin:0 0 17px}.metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.metric{background:var(--surface2);border-radius:12px;padding:14px}.metric .num{font-size:27px;font-weight:850;margin:4px 0}.bar{height:10px;background:#3c3c45;border-radius:100px;overflow:hidden}.bar .filled{height:100%;background:linear-gradient(90deg,#b71723,#fa3945);border-radius:100px}.bar.gold .filled{background:linear-gradient(90deg,#c59536,#efc96e)}.tier-row{display:flex;align-items:center;gap:11px;padding:12px 0;border-bottom:1px solid #36363f}.tier-row:last-child{border-bottom:none}.tier-icon{width:44px;height:44px;display:grid;place-items:center;font-size:24px;border-radius:12px;background:#2a2a31;flex:0 0 auto}.tier-row.current .tier-icon{background:#52262b}.tier-name{font-size:13px;font-weight:800}.tier-range{font-size:11px;color:var(--muted)}.tier-discount{font-size:19px;font-weight:900}.card{background:linear-gradient(145deg,#d92632,#8b1019);padding:20px 20px 16px;border-radius:18px;box-shadow:0 9px 28px #0005}.card-header,.card-footer{display:flex;align-items:center;justify-content:space-between;gap:10px}.card-logo{font-size:23px;font-style:italic;font-weight:950}.card-logo span{color:#ffd6d9}.qr-slot{min-height:140px;margin:19px 0;padding:20px;border:2px dashed #ffffff82;border-radius:12px;background:#ffffff0d;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;text-align:center}.qr-slot .big-qr{font-size:39px}.qr{display:grid;width:184px;height:184px;place-items:center;background:#fff;padding:9px;border-radius:12px;margin:12px auto 4px}.qr svg{width:100%;height:100%;shape-rendering:crispEdges}.code{font-family:ui-monospace,Menlo,Consolas,monospace;letter-spacing:1px;overflow-wrap:anywhere;font-size:12px}.reward-card{display:flex;flex-direction:column;gap:11px}.reward-top{display:flex;align-items:flex-start;gap:12px}.reward-icon{width:64px;height:64px;flex:0 0 auto;border-radius:14px;background:#2a2a31;display:grid;place-items:center;font-size:30px}.reward-icon img{width:100%;height:100%;object-fit:cover;border-radius:14px}.reward-name{font-weight:850;font-size:15px}.reward-cost{font-weight:900;color:#f9e3a0}.chips{display:flex;flex-wrap:wrap;gap:6px}.line{height:1px;background:#373740;margin:12px 0}.field{width:100%;background:#26262d;border:1px solid #4a4a55;color:#fff;border-radius:10px;padding:12px 13px;outline:none;min-height:45px}.field:focus{border-color:#fa5561;box-shadow:0 0 0 2px #e1263129}.field-label{display:block;font-size:11px;font-weight:800;color:#b9bac1;margin:12px 0 5px}.fields2{display:grid;grid-template-columns:1fr 1fr;gap:10px}.check{display:flex;align-items:center;gap:9px;padding:8px 0;font-size:13px}.check input{width:17px;height:17px;flex:0 0 auto}.success{color:var(--green)}.warning{color:var(--warn)}.error{color:#ff8f94}.notice{padding:12px 13px;border-radius:11px;background:#26262e;border:1px solid #45454f;color:#dedee1;font-size:12px;line-height:1.55}.notice.redish{border-color:#73454c;background:#342126}.notice.good{border-color:#335d47;background:#1c3228}.tabs{display:flex;gap:8px;overflow-x:auto;padding:2px 0 10px;scrollbar-width:none}.tabs button{white-space:nowrap;color:#c1c1ca;background:#25252c;border:1px solid #43434c;border-radius:999px;padding:10px 12px;font-weight:700;font-size:12px}.tabs button.active{background:#5f222b;border-color:#af303b;color:white}.nav{position:fixed;left:0;right:0;bottom:0;background:#18181deF;border-top:1px solid #3e3e46;padding:10px 8px calc(10px + env(safe-area-inset-bottom));backdrop-filter:blur(16px);z-index:10}.nav-inner{max-width:580px;margin:auto;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px}.nav button{background:none;border:none;color:#a8a8b2;font-size:11px;padding:3px 2px}.nav button b{display:block;font-size:22px;margin-bottom:2px}.nav button.active{color:#ff5b64;font-weight:800}.logo{max-width:180px;max-height:90px;display:block;object-fit:contain;margin:0 auto 14px}.foot{margin:24px 4px 12px;color:#85858e;font-size:11px;text-align:center}.history-row{border-bottom:1px solid #34343c;padding:12px 0}.history-row:last-child{border-bottom:none}.history-dot{font-size:19px;margin-right:8px}.flex-col{display:flex;flex-direction:column;gap:3px}.mini-stat{font-size:12px;font-weight:750}.two-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.admin-head{display:flex;gap:8px;margin:0 0 16px}.pillcount{padding:3px 8px;border-radius:8px;background:#3d2a2e;color:#ffaab0;font-size:12px;font-weight:800}.reward-filters{display:flex;gap:7px;flex-wrap:wrap}.empty{text-align:center;padding:30px 15px;color:#adaeb6;border:1px dashed #4a4a53;border-radius:12px}.divider{border:0;border-top:1px solid #393943;margin:16px 0}.note-icon{width:44px;height:44px;flex:0 0 auto;display:grid;place-items:center;border-radius:10px;background:#33262a;font-size:24px}.calm{color:#e8d7b0}.demo-stamp{border:1px dashed #735156;color:#e7abb0;border-radius:10px;padding:9px;text-align:center;font-weight:750;font-size:11px;margin:18px 0 2px}.hidden{display:none!important}@media(min-width:700px){main{padding-top:26px}.hero{padding:30px 25px}}@media(max-width:370px){.brand{font-size:24px}.value{font-size:34px}.metric-grid{gap:7px}.metric{padding:11px}.tier-icon{width:37px;height:37px;font-size:21px}}
+</style>
+</head>
+<body>
+<main><header><div><div class="brand">CARP<span>RIDE</span></div><div class="sub">WĘDKARSKI PROGRAM LOJALNOŚCIOWY</div></div><div class="tag">CLUB · DEMO</div></header><div id="app"></div><div class="demo-stamp">TRYB DEMONSTRACYJNY · Dane tylko w tej przeglądarce</div><p class="foot">CarpRide Club · prototyp v2 · brak połączenia z kasą i kontami klientów</p></main>
+<nav class="nav"><div class="nav-inner"><button data-go="start" id="nav-start"><b>⌂</b>Start</button><button data-go="karta" id="nav-karta"><b>▣</b>Moja karta</button><button data-go="nagrody" id="nav-nagrody"><b>🐟</b>Nagrody</button><button data-go="konto" id="nav-konto"><b>☻</b>Konto</button></div></nav>
+<!-- QRCode for JavaScript (c) Kazuhiko Arase, MIT license. See README.txt. -->
+<script>
+(function(){const mods={"QR8bitByte":function(module,require){
+var QRMode = require('./QRMode');
+
+function QR8bitByte(data) {
+	this.mode = QRMode.MODE_8BIT_BYTE;
+	this.data = data;
+}
+
+QR8bitByte.prototype = {
+
+	getLength : function() {
+		return this.data.length;
+	},
+	
+	write : function(buffer) {
+		for (var i = 0; i < this.data.length; i++) {
+			// not JIS ...
+			buffer.put(this.data.charCodeAt(i), 8);
+		}
+	}
+};
+
+module.exports = QR8bitByte;
+
+},
+"QRBitBuffer":function(module,require){
+function QRBitBuffer() {
+	this.buffer = [];
+	this.length = 0;
+}
+
+QRBitBuffer.prototype = {
+
+	get : function(index) {
+		var bufIndex = Math.floor(index / 8);
+		return ( (this.buffer[bufIndex] >>> (7 - index % 8) ) & 1) == 1;
+	},
+	
+	put : function(num, length) {
+		for (var i = 0; i < length; i++) {
+			this.putBit( ( (num >>> (length - i - 1) ) & 1) == 1);
+		}
+	},
+	
+	getLengthInBits : function() {
+		return this.length;
+	},
+	
+	putBit : function(bit) {
+	
+		var bufIndex = Math.floor(this.length / 8);
+		if (this.buffer.length <= bufIndex) {
+			this.buffer.push(0);
+		}
+	
+		if (bit) {
+			this.buffer[bufIndex] |= (0x80 >>> (this.length % 8) );
+		}
+	
+		this.length++;
+	}
+};
+
+module.exports = QRBitBuffer;
+
+},
+"QRErrorCorrectLevel":function(module,require){
+module.exports = {
+	L : 1,
+	M : 0,
+	Q : 3,
+	H : 2
+};
+
+
+},
+"QRMaskPattern":function(module,require){
+module.exports = {
+	PATTERN000 : 0,
+	PATTERN001 : 1,
+	PATTERN010 : 2,
+	PATTERN011 : 3,
+	PATTERN100 : 4,
+	PATTERN101 : 5,
+	PATTERN110 : 6,
+	PATTERN111 : 7
+};
+
+},
+"QRMath":function(module,require){
+var QRMath = {
+
+	glog : function(n) {
+	
+		if (n < 1) {
+			throw new Error("glog(" + n + ")");
+		}
+		
+		return QRMath.LOG_TABLE[n];
+	},
+	
+	gexp : function(n) {
+	
+		while (n < 0) {
+			n += 255;
+		}
+	
+		while (n >= 256) {
+			n -= 255;
+		}
+	
+		return QRMath.EXP_TABLE[n];
+	},
+	
+	EXP_TABLE : new Array(256),
+	
+	LOG_TABLE : new Array(256)
+
+};
+	
+for (var i = 0; i < 8; i++) {
+	QRMath.EXP_TABLE[i] = 1 << i;
+}
+for (var i = 8; i < 256; i++) {
+	QRMath.EXP_TABLE[i] = QRMath.EXP_TABLE[i - 4]
+		^ QRMath.EXP_TABLE[i - 5]
+		^ QRMath.EXP_TABLE[i - 6]
+		^ QRMath.EXP_TABLE[i - 8];
+}
+for (var i = 0; i < 255; i++) {
+	QRMath.LOG_TABLE[QRMath.EXP_TABLE[i] ] = i;
+}
+
+module.exports = QRMath;
+
+},
+"QRMode":function(module,require){
+module.exports = {
+    MODE_NUMBER :       1 << 0,
+    MODE_ALPHA_NUM :    1 << 1,
+    MODE_8BIT_BYTE :    1 << 2,
+    MODE_KANJI :        1 << 3
+};
+
+},
+"QRPolynomial":function(module,require){
+var QRMath = require('./QRMath');
+
+function QRPolynomial(num, shift) {
+	if (num.length === undefined) {
+		throw new Error(num.length + "/" + shift);
+	}
+
+	var offset = 0;
+
+	while (offset < num.length && num[offset] === 0) {
+		offset++;
+	}
+
+	this.num = new Array(num.length - offset + shift);
+	for (var i = 0; i < num.length - offset; i++) {
+		this.num[i] = num[i + offset];
+	}
+}
+
+QRPolynomial.prototype = {
+
+	get : function(index) {
+		return this.num[index];
+	},
+	
+	getLength : function() {
+		return this.num.length;
+	},
+	
+	multiply : function(e) {
+	
+		var num = new Array(this.getLength() + e.getLength() - 1);
+	
+		for (var i = 0; i < this.getLength(); i++) {
+			for (var j = 0; j < e.getLength(); j++) {
+				num[i + j] ^= QRMath.gexp(QRMath.glog(this.get(i) ) + QRMath.glog(e.get(j) ) );
+			}
+		}
+	
+		return new QRPolynomial(num, 0);
+	},
+	
+	mod : function(e) {
+	
+		if (this.getLength() - e.getLength() < 0) {
+			return this;
+		}
+	
+		var ratio = QRMath.glog(this.get(0) ) - QRMath.glog(e.get(0) );
+	
+		var num = new Array(this.getLength() );
+		
+		for (var i = 0; i < this.getLength(); i++) {
+			num[i] = this.get(i);
+		}
+		
+		for (var x = 0; x < e.getLength(); x++) {
+			num[x] ^= QRMath.gexp(QRMath.glog(e.get(x) ) + ratio);
+		}
+	
+		// recursive call
+		return new QRPolynomial(num, 0).mod(e);
+	}
+};
+
+module.exports = QRPolynomial;
+
+},
+"QRRSBlock":function(module,require){
+var QRErrorCorrectLevel = require('./QRErrorCorrectLevel');
+
+function QRRSBlock(totalCount, dataCount) {
+	this.totalCount = totalCount;
+	this.dataCount  = dataCount;
+}
+
+QRRSBlock.RS_BLOCK_TABLE = [
+
+	// L
+	// M
+	// Q
+	// H
+
+	// 1
+	[1, 26, 19],
+	[1, 26, 16],
+	[1, 26, 13],
+	[1, 26, 9],
+	
+	// 2
+	[1, 44, 34],
+	[1, 44, 28],
+	[1, 44, 22],
+	[1, 44, 16],
+
+	// 3
+	[1, 70, 55],
+	[1, 70, 44],
+	[2, 35, 17],
+	[2, 35, 13],
+
+	// 4		
+	[1, 100, 80],
+	[2, 50, 32],
+	[2, 50, 24],
+	[4, 25, 9],
+	
+	// 5
+	[1, 134, 108],
+	[2, 67, 43],
+	[2, 33, 15, 2, 34, 16],
+	[2, 33, 11, 2, 34, 12],
+	
+	// 6
+	[2, 86, 68],
+	[4, 43, 27],
+	[4, 43, 19],
+	[4, 43, 15],
+	
+	// 7		
+	[2, 98, 78],
+	[4, 49, 31],
+	[2, 32, 14, 4, 33, 15],
+	[4, 39, 13, 1, 40, 14],
+	
+	// 8
+	[2, 121, 97],
+	[2, 60, 38, 2, 61, 39],
+	[4, 40, 18, 2, 41, 19],
+	[4, 40, 14, 2, 41, 15],
+	
+	// 9
+	[2, 146, 116],
+	[3, 58, 36, 2, 59, 37],
+	[4, 36, 16, 4, 37, 17],
+	[4, 36, 12, 4, 37, 13],
+	
+	// 10		
+	[2, 86, 68, 2, 87, 69],
+	[4, 69, 43, 1, 70, 44],
+	[6, 43, 19, 2, 44, 20],
+	[6, 43, 15, 2, 44, 16],
+
+	// 11
+	[4, 101, 81],
+	[1, 80, 50, 4, 81, 51],
+	[4, 50, 22, 4, 51, 23],
+	[3, 36, 12, 8, 37, 13],
+
+	// 12
+	[2, 116, 92, 2, 117, 93],
+	[6, 58, 36, 2, 59, 37],
+	[4, 46, 20, 6, 47, 21],
+	[7, 42, 14, 4, 43, 15],
+
+	// 13
+	[4, 133, 107],
+	[8, 59, 37, 1, 60, 38],
+	[8, 44, 20, 4, 45, 21],
+	[12, 33, 11, 4, 34, 12],
+
+	// 14
+	[3, 145, 115, 1, 146, 116],
+	[4, 64, 40, 5, 65, 41],
+	[11, 36, 16, 5, 37, 17],
+	[11, 36, 12, 5, 37, 13],
+
+	// 15
+	[5, 109, 87, 1, 110, 88],
+	[5, 65, 41, 5, 66, 42],
+	[5, 54, 24, 7, 55, 25],
+	[11, 36, 12],
+
+	// 16
+	[5, 122, 98, 1, 123, 99],
+	[7, 73, 45, 3, 74, 46],
+	[15, 43, 19, 2, 44, 20],
+	[3, 45, 15, 13, 46, 16],
+
+	// 17
+	[1, 135, 107, 5, 136, 108],
+	[10, 74, 46, 1, 75, 47],
+	[1, 50, 22, 15, 51, 23],
+	[2, 42, 14, 17, 43, 15],
+
+	// 18
+	[5, 150, 120, 1, 151, 121],
+	[9, 69, 43, 4, 70, 44],
+	[17, 50, 22, 1, 51, 23],
+	[2, 42, 14, 19, 43, 15],
+
+	// 19
+	[3, 141, 113, 4, 142, 114],
+	[3, 70, 44, 11, 71, 45],
+	[17, 47, 21, 4, 48, 22],
+	[9, 39, 13, 16, 40, 14],
+
+	// 20
+	[3, 135, 107, 5, 136, 108],
+	[3, 67, 41, 13, 68, 42],
+	[15, 54, 24, 5, 55, 25],
+	[15, 43, 15, 10, 44, 16],
+
+	// 21
+	[4, 144, 116, 4, 145, 117],
+	[17, 68, 42],
+	[17, 50, 22, 6, 51, 23],
+	[19, 46, 16, 6, 47, 17],
+
+	// 22
+	[2, 139, 111, 7, 140, 112],
+	[17, 74, 46],
+	[7, 54, 24, 16, 55, 25],
+	[34, 37, 13],
+
+	// 23
+	[4, 151, 121, 5, 152, 122],
+	[4, 75, 47, 14, 76, 48],
+	[11, 54, 24, 14, 55, 25],
+	[16, 45, 15, 14, 46, 16],
+
+	// 24
+	[6, 147, 117, 4, 148, 118],
+	[6, 73, 45, 14, 74, 46],
+	[11, 54, 24, 16, 55, 25],
+	[30, 46, 16, 2, 47, 17],
+
+	// 25
+	[8, 132, 106, 4, 133, 107],
+	[8, 75, 47, 13, 76, 48],
+	[7, 54, 24, 22, 55, 25],
+	[22, 45, 15, 13, 46, 16],
+
+	// 26
+	[10, 142, 114, 2, 143, 115],
+	[19, 74, 46, 4, 75, 47],
+	[28, 50, 22, 6, 51, 23],
+	[33, 46, 16, 4, 47, 17],
+
+	// 27
+	[8, 152, 122, 4, 153, 123],
+	[22, 73, 45, 3, 74, 46],
+	[8, 53, 23, 26, 54, 24],
+	[12, 45, 15, 28, 46, 16],
+
+	// 28
+	[3, 147, 117, 10, 148, 118],
+	[3, 73, 45, 23, 74, 46],
+	[4, 54, 24, 31, 55, 25],
+	[11, 45, 15, 31, 46, 16],
+
+	// 29
+	[7, 146, 116, 7, 147, 117],
+	[21, 73, 45, 7, 74, 46],
+	[1, 53, 23, 37, 54, 24],
+	[19, 45, 15, 26, 46, 16],
+
+	// 30
+	[5, 145, 115, 10, 146, 116],
+	[19, 75, 47, 10, 76, 48],
+	[15, 54, 24, 25, 55, 25],
+	[23, 45, 15, 25, 46, 16],
+
+	// 31
+	[13, 145, 115, 3, 146, 116],
+	[2, 74, 46, 29, 75, 47],
+	[42, 54, 24, 1, 55, 25],
+	[23, 45, 15, 28, 46, 16],
+
+	// 32
+	[17, 145, 115],
+	[10, 74, 46, 23, 75, 47],
+	[10, 54, 24, 35, 55, 25],
+	[19, 45, 15, 35, 46, 16],
+
+	// 33
+	[17, 145, 115, 1, 146, 116],
+	[14, 74, 46, 21, 75, 47],
+	[29, 54, 24, 19, 55, 25],
+	[11, 45, 15, 46, 46, 16],
+
+	// 34
+	[13, 145, 115, 6, 146, 116],
+	[14, 74, 46, 23, 75, 47],
+	[44, 54, 24, 7, 55, 25],
+	[59, 46, 16, 1, 47, 17],
+
+	// 35
+	[12, 151, 121, 7, 152, 122],
+	[12, 75, 47, 26, 76, 48],
+	[39, 54, 24, 14, 55, 25],
+	[22, 45, 15, 41, 46, 16],
+
+	// 36
+	[6, 151, 121, 14, 152, 122],
+	[6, 75, 47, 34, 76, 48],
+	[46, 54, 24, 10, 55, 25],
+	[2, 45, 15, 64, 46, 16],
+
+	// 37
+	[17, 152, 122, 4, 153, 123],
+	[29, 74, 46, 14, 75, 47],
+	[49, 54, 24, 10, 55, 25],
+	[24, 45, 15, 46, 46, 16],
+
+	// 38
+	[4, 152, 122, 18, 153, 123],
+	[13, 74, 46, 32, 75, 47],
+	[48, 54, 24, 14, 55, 25],
+	[42, 45, 15, 32, 46, 16],
+
+	// 39
+	[20, 147, 117, 4, 148, 118],
+	[40, 75, 47, 7, 76, 48],
+	[43, 54, 24, 22, 55, 25],
+	[10, 45, 15, 67, 46, 16],
+
+	// 40
+	[19, 148, 118, 6, 149, 119],
+	[18, 75, 47, 31, 76, 48],
+	[34, 54, 24, 34, 55, 25],
+	[20, 45, 15, 61, 46, 16]
+];
+
+QRRSBlock.getRSBlocks = function(typeNumber, errorCorrectLevel) {
+	
+	var rsBlock = QRRSBlock.getRsBlockTable(typeNumber, errorCorrectLevel);
+	
+	if (rsBlock === undefined) {
+		throw new Error("bad rs block @ typeNumber:" + typeNumber + "/errorCorrectLevel:" + errorCorrectLevel);
+	}
+
+	var length = rsBlock.length / 3;
+	
+	var list = [];
+	
+	for (var i = 0; i < length; i++) {
+
+		var count = rsBlock[i * 3 + 0];
+		var totalCount = rsBlock[i * 3 + 1];
+		var dataCount  = rsBlock[i * 3 + 2];
+
+		for (var j = 0; j < count; j++) {
+			list.push(new QRRSBlock(totalCount, dataCount) );	
+		}
+	}
+	
+	return list;
+};
+
+QRRSBlock.getRsBlockTable = function(typeNumber, errorCorrectLevel) {
+
+	switch(errorCorrectLevel) {
+	case QRErrorCorrectLevel.L :
+		return QRRSBlock.RS_BLOCK_TABLE[(typeNumber - 1) * 4 + 0];
+	case QRErrorCorrectLevel.M :
+		return QRRSBlock.RS_BLOCK_TABLE[(typeNumber - 1) * 4 + 1];
+	case QRErrorCorrectLevel.Q :
+		return QRRSBlock.RS_BLOCK_TABLE[(typeNumber - 1) * 4 + 2];
+	case QRErrorCorrectLevel.H :
+		return QRRSBlock.RS_BLOCK_TABLE[(typeNumber - 1) * 4 + 3];
+	default :
+		return undefined;
+	}
+};
+
+module.exports = QRRSBlock;
+
+},
+"QRUtil":function(module,require){
+var QRMode = require('./QRMode');
+var QRPolynomial = require('./QRPolynomial');
+var QRMath = require('./QRMath');
+var QRMaskPattern = require('./QRMaskPattern');
+
+var QRUtil = {
+
+    PATTERN_POSITION_TABLE : [
+        [],
+        [6, 18],
+        [6, 22],
+        [6, 26],
+        [6, 30],
+        [6, 34],
+        [6, 22, 38],
+        [6, 24, 42],
+        [6, 26, 46],
+        [6, 28, 50],
+        [6, 30, 54],        
+        [6, 32, 58],
+        [6, 34, 62],
+        [6, 26, 46, 66],
+        [6, 26, 48, 70],
+        [6, 26, 50, 74],
+        [6, 30, 54, 78],
+        [6, 30, 56, 82],
+        [6, 30, 58, 86],
+        [6, 34, 62, 90],
+        [6, 28, 50, 72, 94],
+        [6, 26, 50, 74, 98],
+        [6, 30, 54, 78, 102],
+        [6, 28, 54, 80, 106],
+        [6, 32, 58, 84, 110],
+        [6, 30, 58, 86, 114],
+        [6, 34, 62, 90, 118],
+        [6, 26, 50, 74, 98, 122],
+        [6, 30, 54, 78, 102, 126],
+        [6, 26, 52, 78, 104, 130],
+        [6, 30, 56, 82, 108, 134],
+        [6, 34, 60, 86, 112, 138],
+        [6, 30, 58, 86, 114, 142],
+        [6, 34, 62, 90, 118, 146],
+        [6, 30, 54, 78, 102, 126, 150],
+        [6, 24, 50, 76, 102, 128, 154],
+        [6, 28, 54, 80, 106, 132, 158],
+        [6, 32, 58, 84, 110, 136, 162],
+        [6, 26, 54, 82, 110, 138, 166],
+        [6, 30, 58, 86, 114, 142, 170]
+    ],
+
+    G15 : (1 << 10) | (1 << 8) | (1 << 5) | (1 << 4) | (1 << 2) | (1 << 1) | (1 << 0),
+    G18 : (1 << 12) | (1 << 11) | (1 << 10) | (1 << 9) | (1 << 8) | (1 << 5) | (1 << 2) | (1 << 0),
+    G15_MASK : (1 << 14) | (1 << 12) | (1 << 10)    | (1 << 4) | (1 << 1),
+
+    getBCHTypeInfo : function(data) {
+        var d = data << 10;
+        while (QRUtil.getBCHDigit(d) - QRUtil.getBCHDigit(QRUtil.G15) >= 0) {
+            d ^= (QRUtil.G15 << (QRUtil.getBCHDigit(d) - QRUtil.getBCHDigit(QRUtil.G15) ) );    
+        }
+        return ( (data << 10) | d) ^ QRUtil.G15_MASK;
+    },
+
+    getBCHTypeNumber : function(data) {
+        var d = data << 12;
+        while (QRUtil.getBCHDigit(d) - QRUtil.getBCHDigit(QRUtil.G18) >= 0) {
+            d ^= (QRUtil.G18 << (QRUtil.getBCHDigit(d) - QRUtil.getBCHDigit(QRUtil.G18) ) );    
+        }
+        return (data << 12) | d;
+    },
+
+    getBCHDigit : function(data) {
+
+        var digit = 0;
+
+        while (data !== 0) {
+            digit++;
+            data >>>= 1;
+        }
+
+        return digit;
+    },
+
+    getPatternPosition : function(typeNumber) {
+        return QRUtil.PATTERN_POSITION_TABLE[typeNumber - 1];
+    },
+
+    getMask : function(maskPattern, i, j) {
+        
+        switch (maskPattern) {
+            
+        case QRMaskPattern.PATTERN000 : return (i + j) % 2 === 0;
+        case QRMaskPattern.PATTERN001 : return i % 2 === 0;
+        case QRMaskPattern.PATTERN010 : return j % 3 === 0;
+        case QRMaskPattern.PATTERN011 : return (i + j) % 3 === 0;
+        case QRMaskPattern.PATTERN100 : return (Math.floor(i / 2) + Math.floor(j / 3) ) % 2 === 0;
+        case QRMaskPattern.PATTERN101 : return (i * j) % 2 + (i * j) % 3 === 0;
+        case QRMaskPattern.PATTERN110 : return ( (i * j) % 2 + (i * j) % 3) % 2 === 0;
+        case QRMaskPattern.PATTERN111 : return ( (i * j) % 3 + (i + j) % 2) % 2 === 0;
+
+        default :
+            throw new Error("bad maskPattern:" + maskPattern);
+        }
+    },
+
+    getErrorCorrectPolynomial : function(errorCorrectLength) {
+
+        var a = new QRPolynomial([1], 0);
+
+        for (var i = 0; i < errorCorrectLength; i++) {
+            a = a.multiply(new QRPolynomial([1, QRMath.gexp(i)], 0) );
+        }
+
+        return a;
+    },
+
+    getLengthInBits : function(mode, type) {
+
+        if (1 <= type && type < 10) {
+
+            // 1 - 9
+
+            switch(mode) {
+            case QRMode.MODE_NUMBER     : return 10;
+            case QRMode.MODE_ALPHA_NUM  : return 9;
+            case QRMode.MODE_8BIT_BYTE  : return 8;
+            case QRMode.MODE_KANJI      : return 8;
+            default :
+                throw new Error("mode:" + mode);
+            }
+
+        } else if (type < 27) {
+
+            // 10 - 26
+
+            switch(mode) {
+            case QRMode.MODE_NUMBER     : return 12;
+            case QRMode.MODE_ALPHA_NUM  : return 11;
+            case QRMode.MODE_8BIT_BYTE  : return 16;
+            case QRMode.MODE_KANJI      : return 10;
+            default :
+                throw new Error("mode:" + mode);
+            }
+
+        } else if (type < 41) {
+
+            // 27 - 40
+
+            switch(mode) {
+            case QRMode.MODE_NUMBER     : return 14;
+            case QRMode.MODE_ALPHA_NUM  : return 13;
+            case QRMode.MODE_8BIT_BYTE  : return 16;
+            case QRMode.MODE_KANJI      : return 12;
+            default :
+                throw new Error("mode:" + mode);
+            }
+
+        } else {
+            throw new Error("type:" + type);
+        }
+    },
+
+    getLostPoint : function(qrCode) {
+        
+        var moduleCount = qrCode.getModuleCount();
+        var lostPoint = 0;
+        var row = 0; 
+        var col = 0;
+
+        
+        // LEVEL1
+        
+        for (row = 0; row < moduleCount; row++) {
+
+            for (col = 0; col < moduleCount; col++) {
+
+                var sameCount = 0;
+                var dark = qrCode.isDark(row, col);
+
+                for (var r = -1; r <= 1; r++) {
+
+                    if (row + r < 0 || moduleCount <= row + r) {
+                        continue;
+                    }
+
+                    for (var c = -1; c <= 1; c++) {
+
+                        if (col + c < 0 || moduleCount <= col + c) {
+                            continue;
+                        }
+
+                        if (r === 0 && c === 0) {
+                            continue;
+                        }
+
+                        if (dark === qrCode.isDark(row + r, col + c) ) {
+                            sameCount++;
+                        }
+                    }
+                }
+
+                if (sameCount > 5) {
+                    lostPoint += (3 + sameCount - 5);
+                }
+            }
+        }
+
+        // LEVEL2
+
+        for (row = 0; row < moduleCount - 1; row++) {
+            for (col = 0; col < moduleCount - 1; col++) {
+                var count = 0;
+                if (qrCode.isDark(row,     col    ) ) count++;
+                if (qrCode.isDark(row + 1, col    ) ) count++;
+                if (qrCode.isDark(row,     col + 1) ) count++;
+                if (qrCode.isDark(row + 1, col + 1) ) count++;
+                if (count === 0 || count === 4) {
+                    lostPoint += 3;
+                }
+            }
+        }
+
+        // LEVEL3
+
+        for (row = 0; row < moduleCount; row++) {
+            for (col = 0; col < moduleCount - 6; col++) {
+                if (qrCode.isDark(row, col) && 
+                        !qrCode.isDark(row, col + 1) && 
+                         qrCode.isDark(row, col + 2) && 
+                         qrCode.isDark(row, col + 3) && 
+                         qrCode.isDark(row, col + 4) && 
+                        !qrCode.isDark(row, col + 5) && 
+                         qrCode.isDark(row, col + 6) ) {
+                    lostPoint += 40;
+                }
+            }
+        }
+
+        for (col = 0; col < moduleCount; col++) {
+            for (row = 0; row < moduleCount - 6; row++) {
+                if (qrCode.isDark(row, col) &&
+                        !qrCode.isDark(row + 1, col) &&
+                         qrCode.isDark(row + 2, col) &&
+                         qrCode.isDark(row + 3, col) &&
+                         qrCode.isDark(row + 4, col) &&
+                        !qrCode.isDark(row + 5, col) &&
+                         qrCode.isDark(row + 6, col) ) {
+                    lostPoint += 40;
+                }
+            }
+        }
+
+        // LEVEL4
+        
+        var darkCount = 0;
+
+        for (col = 0; col < moduleCount; col++) {
+            for (row = 0; row < moduleCount; row++) {
+                if (qrCode.isDark(row, col) ) {
+                    darkCount++;
+                }
+            }
+        }
+        
+        var ratio = Math.abs(100 * darkCount / moduleCount / moduleCount - 50) / 5;
+        lostPoint += ratio * 10;
+
+        return lostPoint;       
+    }
+
+};
+
+module.exports = QRUtil;
+
+},
+"index":function(module,require){
+//---------------------------------------------------------------------
+// QRCode for JavaScript
+//
+// Copyright (c) 2009 Kazuhiko Arase
+//
+// URL: http://www.d-project.com/
+//
+// Licensed under the MIT license:
+//   http://www.opensource.org/licenses/mit-license.php
+//
+// The word "QR Code" is registered trademark of 
+// DENSO WAVE INCORPORATED
+//   http://www.denso-wave.com/qrcode/faqpatent-e.html
+//
+//---------------------------------------------------------------------
+// Modified to work in node for this project (and some refactoring)
+//---------------------------------------------------------------------
+
+var QR8bitByte = require('./QR8bitByte');
+var QRUtil = require('./QRUtil');
+var QRPolynomial = require('./QRPolynomial');
+var QRRSBlock = require('./QRRSBlock');
+var QRBitBuffer = require('./QRBitBuffer');
+
+function QRCode(typeNumber, errorCorrectLevel) {
+	this.typeNumber = typeNumber;
+	this.errorCorrectLevel = errorCorrectLevel;
+	this.modules = null;
+	this.moduleCount = 0;
+	this.dataCache = null;
+	this.dataList = [];
+}
+
+QRCode.prototype = {
+	
+	addData : function(data) {
+		var newData = new QR8bitByte(data);
+		this.dataList.push(newData);
+		this.dataCache = null;
+	},
+	
+	isDark : function(row, col) {
+		if (row < 0 || this.moduleCount <= row || col < 0 || this.moduleCount <= col) {
+			throw new Error(row + "," + col);
+		}
+		return this.modules[row][col];
+	},
+
+	getModuleCount : function() {
+		return this.moduleCount;
+	},
+	
+	make : function() {
+		// Calculate automatically typeNumber if provided is < 1
+		if (this.typeNumber < 1 ){
+			var typeNumber = 1;
+			for (typeNumber = 1; typeNumber < 40; typeNumber++) {
+				var rsBlocks = QRRSBlock.getRSBlocks(typeNumber, this.errorCorrectLevel);
+
+				var buffer = new QRBitBuffer();
+				var totalDataCount = 0;
+				for (var i = 0; i < rsBlocks.length; i++) {
+					totalDataCount += rsBlocks[i].dataCount;
+				}
+
+				for (var x = 0; x < this.dataList.length; x++) {
+					var data = this.dataList[x];
+					buffer.put(data.mode, 4);
+					buffer.put(data.getLength(), QRUtil.getLengthInBits(data.mode, typeNumber) );
+					data.write(buffer);
+				}
+				if (buffer.getLengthInBits() <= totalDataCount * 8)
+					break;
+			}
+			this.typeNumber = typeNumber;
+		}
+		this.makeImpl(false, this.getBestMaskPattern() );
+	},
+	
+	makeImpl : function(test, maskPattern) {
+		
+		this.moduleCount = this.typeNumber * 4 + 17;
+		this.modules = new Array(this.moduleCount);
+		
+		for (var row = 0; row < this.moduleCount; row++) {
+			
+			this.modules[row] = new Array(this.moduleCount);
+			
+			for (var col = 0; col < this.moduleCount; col++) {
+				this.modules[row][col] = null;//(col + row) % 3;
+			}
+		}
+	
+		this.setupPositionProbePattern(0, 0);
+		this.setupPositionProbePattern(this.moduleCount - 7, 0);
+		this.setupPositionProbePattern(0, this.moduleCount - 7);
+		this.setupPositionAdjustPattern();
+		this.setupTimingPattern();
+		this.setupTypeInfo(test, maskPattern);
+		
+		if (this.typeNumber >= 7) {
+			this.setupTypeNumber(test);
+		}
+	
+		if (this.dataCache === null) {
+			this.dataCache = QRCode.createData(this.typeNumber, this.errorCorrectLevel, this.dataList);
+		}
+	
+		this.mapData(this.dataCache, maskPattern);
+	},
+
+	setupPositionProbePattern : function(row, col)  {
+		
+		for (var r = -1; r <= 7; r++) {
+			
+			if (row + r <= -1 || this.moduleCount <= row + r) continue;
+			
+			for (var c = -1; c <= 7; c++) {
+				
+				if (col + c <= -1 || this.moduleCount <= col + c) continue;
+				
+				if ( (0 <= r && r <= 6 && (c === 0 || c === 6) ) || 
+                     (0 <= c && c <= 6 && (r === 0 || r === 6) ) || 
+                     (2 <= r && r <= 4 && 2 <= c && c <= 4) ) {
+					this.modules[row + r][col + c] = true;
+				} else {
+					this.modules[row + r][col + c] = false;
+				}
+			}		
+		}		
+	},
+	
+	getBestMaskPattern : function() {
+	
+		var minLostPoint = 0;
+		var pattern = 0;
+	
+		for (var i = 0; i < 8; i++) {
+			
+			this.makeImpl(true, i);
+	
+			var lostPoint = QRUtil.getLostPoint(this);
+	
+			if (i === 0 || minLostPoint >  lostPoint) {
+				minLostPoint = lostPoint;
+				pattern = i;
+			}
+		}
+	
+		return pattern;
+	},
+	
+	createMovieClip : function(target_mc, instance_name, depth) {
+	
+		var qr_mc = target_mc.createEmptyMovieClip(instance_name, depth);
+		var cs = 1;
+	
+		this.make();
+
+		for (var row = 0; row < this.modules.length; row++) {
+			
+			var y = row * cs;
+			
+			for (var col = 0; col < this.modules[row].length; col++) {
+	
+				var x = col * cs;
+				var dark = this.modules[row][col];
+			
+				if (dark) {
+					qr_mc.beginFill(0, 100);
+					qr_mc.moveTo(x, y);
+					qr_mc.lineTo(x + cs, y);
+					qr_mc.lineTo(x + cs, y + cs);
+					qr_mc.lineTo(x, y + cs);
+					qr_mc.endFill();
+				}
+			}
+		}
+		
+		return qr_mc;
+	},
+
+	setupTimingPattern : function() {
+		
+		for (var r = 8; r < this.moduleCount - 8; r++) {
+			if (this.modules[r][6] !== null) {
+				continue;
+			}
+			this.modules[r][6] = (r % 2 === 0);
+		}
+	
+		for (var c = 8; c < this.moduleCount - 8; c++) {
+			if (this.modules[6][c] !== null) {
+				continue;
+			}
+			this.modules[6][c] = (c % 2 === 0);
+		}
+	},
+	
+	setupPositionAdjustPattern : function() {
+	
+		var pos = QRUtil.getPatternPosition(this.typeNumber);
+		
+		for (var i = 0; i < pos.length; i++) {
+		
+			for (var j = 0; j < pos.length; j++) {
+			
+				var row = pos[i];
+				var col = pos[j];
+				
+				if (this.modules[row][col] !== null) {
+					continue;
+				}
+				
+				for (var r = -2; r <= 2; r++) {
+				
+					for (var c = -2; c <= 2; c++) {
+					
+						if (Math.abs(r) === 2 || 
+                            Math.abs(c) === 2 ||
+                            (r === 0 && c === 0) ) {
+							this.modules[row + r][col + c] = true;
+						} else {
+							this.modules[row + r][col + c] = false;
+						}
+					}
+				}
+			}
+		}
+	},
+	
+	setupTypeNumber : function(test) {
+	
+		var bits = QRUtil.getBCHTypeNumber(this.typeNumber);
+        var mod;
+	
+		for (var i = 0; i < 18; i++) {
+			mod = (!test && ( (bits >> i) & 1) === 1);
+			this.modules[Math.floor(i / 3)][i % 3 + this.moduleCount - 8 - 3] = mod;
+		}
+	
+		for (var x = 0; x < 18; x++) {
+			mod = (!test && ( (bits >> x) & 1) === 1);
+			this.modules[x % 3 + this.moduleCount - 8 - 3][Math.floor(x / 3)] = mod;
+		}
+	},
+	
+	setupTypeInfo : function(test, maskPattern) {
+	
+		var data = (this.errorCorrectLevel << 3) | maskPattern;
+		var bits = QRUtil.getBCHTypeInfo(data);
+        var mod;
+	
+		// vertical		
+		for (var v = 0; v < 15; v++) {
+	
+			mod = (!test && ( (bits >> v) & 1) === 1);
+	
+			if (v < 6) {
+				this.modules[v][8] = mod;
+			} else if (v < 8) {
+				this.modules[v + 1][8] = mod;
+			} else {
+				this.modules[this.moduleCount - 15 + v][8] = mod;
+			}
+		}
+	
+		// horizontal
+		for (var h = 0; h < 15; h++) {
+	
+			mod = (!test && ( (bits >> h) & 1) === 1);
+			
+			if (h < 8) {
+				this.modules[8][this.moduleCount - h - 1] = mod;
+			} else if (h < 9) {
+				this.modules[8][15 - h - 1 + 1] = mod;
+			} else {
+				this.modules[8][15 - h - 1] = mod;
+			}
+		}
+	
+		// fixed module
+		this.modules[this.moduleCount - 8][8] = (!test);
+	
+	},
+	
+	mapData : function(data, maskPattern) {
+		
+		var inc = -1;
+		var row = this.moduleCount - 1;
+		var bitIndex = 7;
+		var byteIndex = 0;
+		
+		for (var col = this.moduleCount - 1; col > 0; col -= 2) {
+	
+			if (col === 6) col--;
+	
+			while (true) {
+	
+				for (var c = 0; c < 2; c++) {
+					
+					if (this.modules[row][col - c] === null) {
+						
+						var dark = false;
+	
+						if (byteIndex < data.length) {
+							dark = ( ( (data[byteIndex] >>> bitIndex) & 1) === 1);
+						}
+	
+						var mask = QRUtil.getMask(maskPattern, row, col - c);
+	
+						if (mask) {
+							dark = !dark;
+						}
+						
+						this.modules[row][col - c] = dark;
+						bitIndex--;
+	
+						if (bitIndex === -1) {
+							byteIndex++;
+							bitIndex = 7;
+						}
+					}
+				}
+								
+				row += inc;
+	
+				if (row < 0 || this.moduleCount <= row) {
+					row -= inc;
+					inc = -inc;
+					break;
+				}
+			}
+		}
+		
+	}
+
+};
+
+QRCode.PAD0 = 0xEC;
+QRCode.PAD1 = 0x11;
+
+QRCode.createData = function(typeNumber, errorCorrectLevel, dataList) {
+	
+	var rsBlocks = QRRSBlock.getRSBlocks(typeNumber, errorCorrectLevel);
+	
+	var buffer = new QRBitBuffer();
+	
+	for (var i = 0; i < dataList.length; i++) {
+		var data = dataList[i];
+		buffer.put(data.mode, 4);
+		buffer.put(data.getLength(), QRUtil.getLengthInBits(data.mode, typeNumber) );
+		data.write(buffer);
+	}
+
+	// calc num max data.
+	var totalDataCount = 0;
+	for (var x = 0; x < rsBlocks.length; x++) {
+		totalDataCount += rsBlocks[x].dataCount;
+	}
+
+	if (buffer.getLengthInBits() > totalDataCount * 8) {
+		throw new Error("code length overflow. (" + 
+            buffer.getLengthInBits() + 
+            ">" +  
+            totalDataCount * 8 + 
+            ")");
+	}
+
+	// end code
+	if (buffer.getLengthInBits() + 4 <= totalDataCount * 8) {
+		buffer.put(0, 4);
+	}
+
+	// padding
+	while (buffer.getLengthInBits() % 8 !== 0) {
+		buffer.putBit(false);
+	}
+
+	// padding
+	while (true) {
+		
+		if (buffer.getLengthInBits() >= totalDataCount * 8) {
+			break;
+		}
+		buffer.put(QRCode.PAD0, 8);
+		
+		if (buffer.getLengthInBits() >= totalDataCount * 8) {
+			break;
+		}
+		buffer.put(QRCode.PAD1, 8);
+	}
+
+	return QRCode.createBytes(buffer, rsBlocks);
+};
+
+QRCode.createBytes = function(buffer, rsBlocks) {
+
+	var offset = 0;
+	
+	var maxDcCount = 0;
+	var maxEcCount = 0;
+	
+	var dcdata = new Array(rsBlocks.length);
+	var ecdata = new Array(rsBlocks.length);
+	
+	for (var r = 0; r < rsBlocks.length; r++) {
+
+		var dcCount = rsBlocks[r].dataCount;
+		var ecCount = rsBlocks[r].totalCount - dcCount;
+
+		maxDcCount = Math.max(maxDcCount, dcCount);
+		maxEcCount = Math.max(maxEcCount, ecCount);
+		
+		dcdata[r] = new Array(dcCount);
+		
+		for (var i = 0; i < dcdata[r].length; i++) {
+			dcdata[r][i] = 0xff & buffer.buffer[i + offset];
+		}
+		offset += dcCount;
+		
+		var rsPoly = QRUtil.getErrorCorrectPolynomial(ecCount);
+		var rawPoly = new QRPolynomial(dcdata[r], rsPoly.getLength() - 1);
+
+		var modPoly = rawPoly.mod(rsPoly);
+		ecdata[r] = new Array(rsPoly.getLength() - 1);
+		for (var x = 0; x < ecdata[r].length; x++) {
+            var modIndex = x + modPoly.getLength() - ecdata[r].length;
+			ecdata[r][x] = (modIndex >= 0)? modPoly.get(modIndex) : 0;
+		}
+
+	}
+	
+	var totalCodeCount = 0;
+	for (var y = 0; y < rsBlocks.length; y++) {
+		totalCodeCount += rsBlocks[y].totalCount;
+	}
+
+	var data = new Array(totalCodeCount);
+	var index = 0;
+
+	for (var z = 0; z < maxDcCount; z++) {
+		for (var s = 0; s < rsBlocks.length; s++) {
+			if (z < dcdata[s].length) {
+				data[index++] = dcdata[s][z];
+			}
+		}
+	}
+
+	for (var xx = 0; xx < maxEcCount; xx++) {
+		for (var t = 0; t < rsBlocks.length; t++) {
+			if (xx < ecdata[t].length) {
+				data[index++] = ecdata[t][xx];
+			}
+		}
+	}
+
+	return data;
+
+};
+
+module.exports = QRCode;
+
+}};const cache={};function req(id){const k=id.replace(/^\.\//,"");if(!cache[k]){if(!mods[k])throw Error("QR module missing: "+k);const mod={exports:{}};cache[k]=mod;mods[k](mod,req)}return cache[k].exports;}window.QRCode=req("index");})();
+</script>
+<script>
+'use strict';
+const KEY='carpride_club_demo_v2';
+const dateFmt=new Intl.DateTimeFormat('pl-PL',{day:'2-digit',month:'2-digit',year:'numeric'});
+const moneyFmt=new Intl.NumberFormat('pl-PL',{minimumFractionDigits:2,maximumFractionDigits:2});
+const numFmt=new Intl.NumberFormat('pl-PL',{maximumFractionDigits:2});
+const TIER_EMOJI=['🎣','🪑','🐟','🏆','👑'];
+const now=()=>new Date();
+const isoDate=d=>{const x=new Date(d);return [x.getFullYear(),String(x.getMonth()+1).padStart(2,'0'),String(x.getDate()).padStart(2,'0')].join('-')};
+const shiftDays=(d,n)=>{const x=new Date(d);x.setDate(x.getDate()+n);return x};
+const dateAt=s=>new Date(s+'T00:00:00');
+const formatDate=d=>dateFmt.format(new Date(d));
+const cash=n=>moneyFmt.format(Number(n)||0)+' zł';
+const pointsText=n=>numFmt.format(Number(n)||0)+' pkt';
+const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const cents=v=>Math.round((Number(v)||0)*100);
+const dec=v=>Math.round((Number(v)||0)*100)/100;
+const fresh=()=>{
+ const base=now();const day=n=>isoDate(shiftDays(base,-n));
+ return {
+  version:2,
+  tiers:[{name:'Niedzielny wędkarz',min:0,discount:2},{name:'Weekendowy wędkarz',min:500,discount:5},{name:'Wędkarski pasjonat',min:1000,discount:7},{name:'Wędkarski mistrz',min:2000,discount:9},{name:'Król wód',min:4000,discount:10}],
+  purchases:[
+   {id:'P-1001',date:day(92),regular:420,promo:0,discount:0,paid:420,refund:0,description:'Zakup w sklepie stacjonarnym · demo'},
+   {id:'P-1002',date:day(46),regular:335,promo:0,discount:0,paid:335,refund:0,description:'Zakup w sklepie stacjonarnym · demo'},
+   {id:'P-1003',date:day(8),regular:280,promo:0,discount:0,paid:280,refund:0,description:'Zakup w sklepie stacjonarnym · demo'}
+  ],
+  fishClaims:[],
+  rewards:[
+   {id:'R1',title:'Bon 10 zł na zakupy',kind:'voucher',value:10,cost:50,emoji:'🎟️',description:'Bon na zakupy stacjonarne. Można łączyć z rabatem poziomu i promocjami.',perAccount:'period',limitCount:1,limitDays:30,globalLimit:null,validDays:30,active:true},
+   {id:'R2',title:'Bon 100 zł na zakupy',kind:'voucher',value:100,cost:100,emoji:'💯',description:'Jednorazowy bon dla każdego konta.',perAccount:'lifetime',limitCount:1,limitDays:30,globalLimit:null,validDays:90,active:true},
+   {id:'R3',title:'Bon 10 zł — limitowana pula',kind:'voucher',value:10,cost:1,emoji:'🎁',description:'Przykładowa nagroda z globalnym limitem 10 sztuk.',perAccount:'unlimited',limitCount:1,limitDays:30,globalLimit:10,validDays:14,active:true},
+   {id:'R4',title:'Zestaw przynęt karpiowych',kind:'product',value:0,cost:80,emoji:'🐟',description:'Nagroda rzeczowa do odebrania w sklepie stacjonarnym.',perAccount:'lifetime',limitCount:1,limitDays:30,globalLimit:20,validDays:60,active:true}
+  ],
+  fishManualCorrections:[],
+  nextPurchase:1004
+ };
+};
+let state;
+try{state=JSON.parse(localStorage.getItem(KEY)||'null');if(!state||state.version!==2||!Array.isArray(state.purchases)||!Array.isArray(state.rewards))throw Error('bad');}catch(e){state=fresh();}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){console.warn('Storage unavailable',e)}}
+let tab='start';let adminTab='sale';let ui={selectedCodes:[],saleRegular:'300',salePromo:'100',lookup:'',editId:null,draft:null};
+function expiryPurchase(p){const d=dateAt(p.date);d.setFullYear(d.getFullYear()+1);return d;}
+function expiredPurchase(p){return now()>=expiryPurchase(p);}
+function effectivePaid(p){return Math.max(0,dec(p.paid-(p.refund||0)))}
+function tierPoints(){return dec(state.purchases.filter(p=>!expiredPurchase(p)).reduce((s,p)=>s+effectivePaid(p),0))}
+function fishEarned(){return state.purchases.reduce((s,p)=>s+Math.floor((cents(effectivePaid(p))+0.00001)/1000),0)}
+function fishBalance(){return fishEarned()-state.fishClaims.reduce((s,c)=>s+c.cost,0)+(state.fishManualCorrections||[]).reduce((s,x)=>s+x.delta,0)}
+function tierByPoints(pts){return [...state.tiers].reverse().find(x=>pts>=x.min)||state.tiers[0]}
+function tierIndex(pts){return state.tiers.findIndex(x=>x===tierByPoints(pts))}
+function nextTier(pts){return state.tiers.find(x=>x.min>pts)||null}
+function percentProgress(pts){const cur=tierByPoints(pts),nxt=nextTier(pts);if(!nxt)return 100;return Math.max(0,Math.min(100,100*(pts-cur.min)/(nxt.min-cur.min)))}
+function nearestExpiry(){const a=state.purchases.filter(p=>!expiredPurchase(p)&&effectivePaid(p)>0).sort((a,b)=>expiryPurchase(a)-expiryPurchase(b));return a[0]||null}
+function expirationClaim(c){if(c.validDays===null||c.validDays===undefined)return null;return shiftDays(new Date(c.createdAt),c.validDays)}
+function claimStatus(c){if(c.usedAt)return 'used';const expiry=expirationClaim(c);if(expiry&&now()>=expiry)return 'expired';return 'ready'}
+function getReward(id){return state.rewards.find(r=>r.id===id)}
+function globalLeft(r){if(r.globalLimit===null||r.globalLimit===undefined)return null;return Math.max(0,r.globalLimit-state.fishClaims.filter(c=>c.rewardId===r.id).length)}
+function ownClaims(r){return state.fishClaims.filter(c=>c.rewardId===r.id)}
+function limitInfo(r){const all=ownClaims(r);if(r.perAccount==='lifetime')return {blocked:all.length>=1,expires:null};if(r.perAccount==='period'){
+ const days=Math.max(1,+r.limitDays||30),max=Math.max(1,+r.limitCount||1),active=all.filter(c=>now()<shiftDays(new Date(c.createdAt),days)).sort((a,b)=>new Date(a.createdAt)-new Date(b.createdAt));
+ if(active.length>=max)return {blocked:true,expires:shiftDays(new Date(active[active.length-max].createdAt),days)};
+ }return {blocked:false,expires:null};}
+function perAccountLabel(r){if(r.perAccount==='lifetime')return '1 szt. na konto · na zawsze';if(r.perAccount==='period')return `Maks. ${r.limitCount} szt. na ${r.limitDays} dni / konto`;return 'Bez limitu na konto'}
+function readableClaimStatus(c){return claimStatus(c)==='ready'?'Do wykorzystania':claimStatus(c)==='used'?'Wykorzystana':'Wygasła'}
+function htmlQR(value){try{const qr=new QRCode(-1,1);qr.addData(value);qr.make();const n=qr.getModuleCount();let rects='';for(let y=0;y<n;y++){for(let x=0;x<n;x++){if(qr.isDark(y,x))rects+=`<rect x="${x}" y="${y}" width="1" height="1"/>`}}return `<div class="qr" aria-label="Kod QR nagrody"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-3 -3 ${n+6} ${n+6}" role="img" aria-label="Kod QR ${esc(value)}"><rect x="-3" y="-3" width="${n+6}" height="${n+6}" fill="white"/><g fill="#101014">${rects}</g></svg></div>`}catch(e){return `<div class="qr-slot"><b>Tu będzie kod QR</b><div class="code">${esc(value)}</div></div>`}}
+function levelBadge(pts){const tier=tierByPoints(pts);return `<span class="chip">${TIER_EMOJI[tierIndex(pts)]||'🎣'} ${esc(tier.name)}</span>`}
+function head(title,intro=''){return `<h1 class="title">${title}</h1>${intro?`<p class="page-intro">${intro}</p>`:''}`}
+function startPage(){const pts=tierPoints(),fish=fishBalance(),tier=tierByPoints(pts);return `
+ <div class="hero"><div class="eyebrow">WITAJ W CARPRIDE CLUB</div><h1>Łów korzyści.<br>Łap nagrody.</h1><p>Zbieraj złowione ryby, zdobywaj poziomy i korzystaj z rabatów w sklepie stacjonarnym.</p><button class="primary mt12" data-go="karta">MOJA KARTA →</button></div>
+ <div class="section"><h2>Twój status konta</h2><button class="link-btn" data-go="karta">MOJA KARTA →</button></div>
+ <div class="panel row" role="button" data-go="karta" tabindex="0"><div class="note-icon">${TIER_EMOJI[tierIndex(pts)]}</div><div class="grow"><div class="label">POZIOM KONTA</div><div class="strong" style="font-size:17px;margin-top:4px">${esc(tier.name)}</div></div><span style="color:var(--red2);font-size:24px">›</span></div>
+ <div class="section"><h2>Złowione ryby</h2><span class="chip gray">OSOBNE SALDO</span></div>
+ <div class="panel"><div class="label">DOSTĘPNE RYBY</div><div class="value mt8">${numFmt.format(fish)} <span class="suffix">🐟</span></div><p class="muted small">1 złowiona ryba za każde pełne 10 zł na pojedynczym paragonie. Ryby nie wygasają.</p><button class="primary block mt8" data-go="nagrody">Wymień złowione ryby →</button><button class="link-btn mt8" data-go="moje-nagrody">Moje odebrane nagrody (${state.fishClaims.filter(c=>claimStatus(c)==='ready').length})</button></div>
+ <div class="section"><h2>Aktualności i promocje</h2><button class="link-btn" data-go="promocje">WSZYSTKIE →</button></div>
+ <div class="panel row"><div class="grow"><span class="label red">OKAZJA</span><h3 style="margin:5px 0">Przynęty karpiowe</h3><div class="fine">Przykładowa oferta w sklepie.</div></div><span style="color:var(--red2);font-size:28px">›</span></div>
+ <div class="notice">Wersja demonstracyjna: możesz testować zakup, wymianę ryb i odbiór nagród na jednym koncie testowym. Nie jest to system kasowy.</div>`}
+function kartaPage(){const pts=tierPoints(),cur=tierByPoints(pts),next=nextTier(pts),exp=nearestExpiry();return `${head('Moja karta','Punkty poziomu to osobny system od złowionych ryb. Liczą się wyłącznie niewygasłe punkty z ostatnich 12 miesięcy.')}
+ <div class="card"><div class="card-header"><div class="card-logo">CARP<span>RIDE</span></div><div class="xs strong">CLUB MEMBER</div></div><div class="qr-slot"><div class="big-qr">▦</div><b>Tu będzie kod QR</b><div class="xs">Kod karty klienta — w przygotowaniu</div></div><div class="card-footer"><span class="small strong">KARTA LOJALNOŚCIOWA</span><span class="small strong">CR-000001</span></div></div>
+ <div class="metric-grid mt12"><div class="metric"><div class="label">PUNKTY POZIOMU</div><div class="num">${numFmt.format(pts)}</div><div class="fine">Aktywne teraz</div></div><div class="metric"><div class="label">STAŁY RABAT</div><div class="num success">${cur.discount}%</div><div class="fine">W sklepie stacjonarnym</div></div></div>
+ <div class="panel"><div class="label">AKTUALNY POZIOM</div><div style="margin:9px 0">${levelBadge(pts)}</div><div class="row mt12"><span class="strong small">${next?'Do poziomu: '+esc(next.name):'Najwyższy poziom osiągnięty'}</span><span class="fine">${next?pointsText(dec(next.min-pts))+' do awansu':'4000+ pkt'}</span></div><div class="bar ${!next?'gold':''} mt12"><div class="filled" style="width:${percentProgress(pts)}%"></div></div><div class="row fine mt8"><span>${numFmt.format(cur.min)} pkt</span><span>${next?numFmt.format(next.min):'4000'} pkt</span></div></div>
+ <div class="panel"><div class="row"><b>📅 Najbliższe wygasające punkty</b></div><p class="muted small" style="margin-bottom:0">${exp?`<b style="color:#fff">${pointsText(effectivePaid(exp))}</b> wygaśnie ${formatDate(expiryPurchase(exp))}.`:'Brak punktów oczekujących na wygaśnięcie.'}</p></div>
+ <div class="section"><h2>Progi programu</h2><span class="fine">1 zł = 1 pkt</span></div><div class="panel" style="padding-top:4px;padding-bottom:4px">${state.tiers.map((t,i)=>{const upper=state.tiers[i+1];return `<div class="tier-row ${cur===t?'current':''}"><div class="tier-icon">${TIER_EMOJI[i]}</div><div class="grow"><div class="tier-name">${esc(t.name)}</div><div class="tier-range">${numFmt.format(t.min)}${upper?'–'+numFmt.format(upper.min-1):'+'} pkt</div>${cur===t?'<div class="success xs strong">TWÓJ AKTUALNY POZIOM</div>':''}</div><div class="tier-discount ${cur===t?'red':''}">${t.discount}%</div></div>`}).join('')}</div>
+ <button class="secondary block mt12" data-go="historia">📜 Pełna historia punktów i wygaśnięć →</button><p class="fine mt12">Punkty poziomu nie są wymieniane na nagrody. Każdy zakup stacjonarny ma osobny termin ważności: 12 miesięcy.</p>`}
+function fishRewardPage(){const fish=fishBalance();const visible=state.rewards.filter(r=>r.active&&!(r.perAccount==='lifetime'&&limitInfo(r).blocked));return `${head('Wymień złowione ryby','Wybierz bon, produkt lub bonus. Ryby można wymieniać tylko raz na konkretną nagrodę, jeśli tak stanowi jej limit.')}
+ <div class="panel row"><div><div class="label">TWOJE ZŁOWIONE RYBY</div><div class="value mt8">${numFmt.format(fish)} <span class="suffix">🐟</span></div></div><button class="tiny-btn" data-go="moje-nagrody">Moje nagrody →</button></div>
+ ${visible.length?visible.map(r=>{const left=globalLeft(r),limit=limitInfo(r),enough=fish>=r.cost,blocked=limit.blocked||(left!==null&&left<=0),reason=limit.blocked?`Limit na konto wykorzystany${limit.expires?' — ponowna wymiana od '+formatDate(limit.expires):''}`:left!==null&&left<=0?'Wyczerpano pulę globalną':!enough?'Za mało złowionych ryb':'';return `<div class="panel reward-card"><div class="reward-top"><div class="reward-icon">${r.imageData?`<img src="${esc(r.imageData)}" alt="Zdjęcie nagrody">`:esc(r.emoji)}</div><div class="grow"><div class="reward-name">${esc(r.title)}</div><div class="fine mt8">${esc(r.description)}</div><div class="reward-cost mt8">🐟 ${numFmt.format(r.cost)} ryb</div></div></div><div class="chips"><span class="chip gray">${esc(perAccountLabel(r))}</span>${left!==null?`<span class="chip gold">Limit globalny: ${r.globalLimit} szt. · zostało ${left}</span>`:''}<span class="chip gray">${r.validDays===null?'Ważna bezterminowo':'Ważna '+r.validDays+' dni po wymianie'}</span></div>${reason?`<div class="fine warning">${esc(reason)}</div>`:''}<button class="primary block" data-action="claim" data-id="${esc(r.id)}" ${blocked||!enough?'disabled':''}>Wypuść ${numFmt.format(r.cost)} ${r.cost===1?'rybę':'ryb'} →</button></div>`}).join(''):'<div class="empty">Nie ma teraz dostępnych nagród dla Twojego konta.</div>'}
+ <div class="notice">Nagrody mogą mieć limit na konto i/lub globalną pulę. Wymiana zużywa ryby i miejsce w puli bezpowrotnie, również gdy nagroda później wygaśnie.</div>`}
+function myRewardsPage(){const arr=[...state.fishClaims].reverse();return `${head('Moje nagrody','Tutaj przechowujesz unikalne kody QR wszystkich odebranych bonów i nagród.')}
+ <button class="secondary block" data-go="nagrody">← Wróć do katalogu</button>${arr.length?arr.map(c=>{const r=getReward(c.rewardId),status=claimStatus(c),date=expirationClaim(c);return `<div class="panel"><div class="row"><b>${esc(c.title)}</b><span class="chip ${status==='ready'?'green':'gray'}">${readableClaimStatus(c)}</span></div><div class="fine mt8">Wymiana: ${formatDate(c.createdAt)} · koszt: ${numFmt.format(c.cost)} ryb</div><div class="fine">${date?'Ważna do: '+formatDate(date):'Bez terminu ważności'}</div>${status==='ready'?`${htmlQR(c.code)}<div style="text-align:center" class="code">${esc(c.code)}</div><p class="fine" style="text-align:center">Pokaż ten kod sprzedawcy w sklepie.</p><button class="secondary block mt12" data-action="copy" data-code="${esc(c.code)}">Kopiuj kod nagrody</button>`:`<p class="notice mt12">${status==='used'?'Nagroda zrealizowana '+formatDate(c.usedAt)+'.':'Nagroda wygasła i nie może już zostać wykorzystana.'} Wydane ryby nie wracają na konto.</p>`}</div>`}).join(''):'<div class="empty mt12">Nie masz jeszcze odebranych nagród. Wybierz nagrodę w katalogu i wymień na nią ryby.</div>'}`}
+function historiaPage(){const items=[];state.purchases.forEach(p=>{items.push({date:dateAt(p.date),html:`<div class="history-row"><div class="row"><span class="strong">🛒 Zakup stacjonarny <span class="fine">${esc(p.id)}</span></span><b class="success">+${pointsText(p.paid)}</b></div><div class="fine mt8">${formatDate(dateAt(p.date))} · zapłacono ${cash(p.paid)} · ważne do ${formatDate(expiryPurchase(p))}</div></div>`});if(p.refund>0)items.push({date:dateAt(p.refundDate||p.date),html:`<div class="history-row"><div class="row"><b>↩️ Zwrot zakupu ${esc(p.id)}</b><b class="error">−${pointsText(p.refund)}</b></div><div class="fine mt8">${formatDate(dateAt(p.refundDate||p.date))} · korekta po zwrocie</div></div>`});if(expiredPurchase(p)&&effectivePaid(p)>0)items.push({date:expiryPurchase(p),html:`<div class="history-row"><div class="row"><b>⌛ Wygaśnięcie punktów ${esc(p.id)}</b><b class="warning">−${pointsText(effectivePaid(p))}</b></div><div class="fine mt8">${formatDate(expiryPurchase(p))} · minęło 12 miesięcy od zakupu</div></div>`});});items.sort((a,b)=>b.date-a.date);return `${head('Historia punktów','Pełna historia punktów poziomu: zakupów, korekt za zwroty i wygaśnięć.')}
+ <div class="panel row"><div class="label">AKTYWNE PUNKTY POZIOMU</div><b style="font-size:23px">${pointsText(tierPoints())}</b></div><div class="panel">${items.length?items.map(x=>x.html).join(''):'<div class="empty">Brak operacji.</div>'}</div><button class="secondary block" data-go="karta">← Wróć do mojej karty</button>`}
+function promocjePage(){return `${head('Promocje','Aktualności sklepu — przykładowe treści demonstracyjne.')}
+ <div class="panel"><div class="label red">OKAZJA</div><h2>🎯 Przynęty karpiowe</h2><p class="muted small">Sprawdź aktualne ceny kulek i pelletów.</p><div class="line"></div><div class="label">OFERTA DEMONSTRACYJNA</div></div><div class="panel"><div class="label red">NOWOŚĆ</div><h2>🐟 Sezon nad wodą</h2><p class="muted small">Nowości sprzętowe już dostępne w sklepie.</p><div class="line"></div><div class="label">OFERTA DEMONSTRACYJNA</div></div>`}
+function kontoPage(){return `<img class="logo" src="logo.jpg" alt="Logo CarpRide">${head('Moje konto','Konto testowe. Prawdziwa rejestracja i logowanie będą wymagały serwera.')}
+ <div class="panel"><b>👤 Klient demonstracyjny</b><div class="fine mt8">Numer karty: CR-000001</div><div class="fine">Dwa osobne salda: punkty poziomu i złowione ryby.</div></div>
+ <button class="secondary block mt12" data-go="moje-nagrody">🎁 Moje nagrody</button><button class="secondary block mt12" data-go="historia">📜 Historia punktów</button><button class="primary block mt12" data-go="admin">🛠 Panel administratora i sprzedawcy · DEMO</button>
+ <div class="notice redish mt16">⚠️ Wersja testowa nie ma zabezpieczonych kont. Każdy, kto otworzy tę stronę, może zobaczyć demonstracyjny panel administratora we własnej przeglądarce. Nie używaj jej do prawdziwych zakupów.</div>
+ <button class="danger-btn block mt12" data-action="reset">Resetuj wszystkie dane demo</button>`}
+function activeVouchers(){return state.fishClaims.filter(c=>c.kind==='voucher'&&claimStatus(c)==='ready');}
+function checkedVouchers(){return activeVouchers().filter(c=>ui.selectedCodes.includes(c.code));}
+function checkout(){let R=Number(String(ui.saleRegular).replace(',','.')),M=Number(String(ui.salePromo).replace(',','.'));if(!Number.isFinite(R)||!Number.isFinite(M)||R<0||M<0||R+M<=0)return {error:'Wpisz poprawne kwoty produktów; suma musi być większa od zera.'};R=dec(R);M=dec(M);
+ const codes=checkedVouchers();const V=dec(codes.reduce((s,c)=>s+c.value,0));const P=tierPoints();const ranked=[...state.tiers].reverse();let chosen=null,paid=0,discAmount=0;
+ for(const tier of ranked){const disc=dec(R*tier.discount/100),total=dec(R+M-disc);const result=dec(total-V);if(result<0)continue;if(P+result+1e-8>=tier.min){chosen=tier;paid=result;discAmount=disc;break}}
+ if(!chosen){const t=state.tiers[0];const d=dec(R*t.discount/100);if(dec(R+M-d)<V)return {error:'Wybrane bony przekraczają kwotę zakupów po rabacie. Odznacz część bonów.'};chosen=t;paid=dec(R+M-d-V);discAmount=d;}
+ if(V>dec(R+M-discAmount))return {error:'Bony przekraczają kwotę do zapłaty.'};
+ const earnedFish=Math.floor(cents(paid)/1000);const nextPoints=dec(P+paid);return {R,M,V,paid,points:paid,fish:earnedFish,discAmount,tier:chosen,before:tierByPoints(P),after:tierByPoints(nextPoints),codes};}
+function salePreview(){const c=checkout();if(c.error)return `<div class="notice redish mt12">${esc(c.error)}</div>`;return `<div class="notice mt12"><div class="row"><span>Produkty regularne</span><b>${cash(c.R)}</b></div><div class="row mt8"><span>Produkty promocyjne</span><b>${cash(c.M)}</b></div><div class="row mt8"><span>Rabat poziomu (${c.tier.discount}%)</span><b class="success">−${cash(c.discAmount)}</b></div><div class="row mt8"><span>Bony za ryby</span><b class="success">−${cash(c.V)}</b></div><div class="line"></div><div class="row"><b>Klient płaci</b><b style="font-size:23px">${cash(c.paid)}</b></div><div class="row mt8"><span>Nowe punkty poziomu</span><b>+${pointsText(c.points)}</b></div><div class="row mt8"><span>Nowe złowione ryby</span><b>+${c.fish} 🐟</b></div><div class="row mt8"><span>Poziom po zakupie</span><b>${esc(c.after.name)}</b></div>${c.before.name!==c.after.name?'<div class="success mt8 strong">🎉 Awans już przy tym zakupie!</div>':''}</div>`}
+function adminPage(){return `${head('Panel administracyjny · DEMO','Tutaj możesz testować operacje na jednym fikcyjnym kliencie i zmieniać katalog nagród. Zmiany zapisują się lokalnie na tym urządzeniu.')}
+ <button class="secondary block mb8" data-go="konto">← Wróć do konta</button><div class="tabs">${[['sale','Zakupy i punkty'],['redeem','Kody QR'],['rewards','Nagrody i limity'],['tiers','Progi i rabaty'],['returns','Zwroty']].map(([id,label])=>`<button data-admin="${id}" class="${adminTab===id?'active':''}">${label}</button>`).join('')}</div>
+ ${adminTab==='sale'?saleAdmin():adminTab==='redeem'?redeemAdmin():adminTab==='rewards'?rewardsAdmin():adminTab==='tiers'?tiersAdmin():returnsAdmin()}
+ <div class="notice redish mt16">To tylko symulator. Bez logowania, centralnej bazy i integracji Subiekt GT nie można bezpiecznie przyznawać klientom punktów ani egzekwować limitów globalnych.</div>`}
+function saleAdmin(){const vouchers=activeVouchers();return `<div class="panel"><div class="label">KARTA KLIENTA · CR-000001</div><div class="row mt8"><div><b>${esc(tierByPoints(tierPoints()).name)}</b><div class="fine">${pointsText(tierPoints())} · rabat ${tierByPoints(tierPoints()).discount}%</div></div><div class="chip gray">🐟 ${fishBalance()} ryb</div></div></div>
+ <div class="panel"><h3 style="margin:0">Dodaj zakup stacjonarny</h3><p class="fine">Wpisz ceny przed rabatem lojalnościowym. Produkty promocyjne już wpisujesz po ich przecenie.</p><label class="field-label" for="sale-regular">Suma produktów w cenach regularnych (zł)</label><input id="sale-regular" class="field" inputmode="decimal" type="number" min="0" step="0.01" value="${esc(ui.saleRegular)}" data-sale="regular"><label class="field-label" for="sale-promo">Suma produktów promocyjnych (zł)</label><input id="sale-promo" class="field" inputmode="decimal" type="number" min="0" step="0.01" value="${esc(ui.salePromo)}" data-sale="promo">
+ ${vouchers.length?`<label class="field-label">Wykorzystaj otrzymane bony (można wybrać kilka)</label>${vouchers.map(c=>`<label class="check"><input type="checkbox" data-coupon="${esc(c.code)}" ${ui.selectedCodes.includes(c.code)?'checked':''}>${esc(c.title)} · −${cash(c.value)} <span class="fine">${esc(c.code)}</span></label>`).join('')}`:'<p class="fine mt12">Brak aktywnych bonów — odbierz je wcześniej w zakładce „Nagrody”.</p>'}
+ <div id="sale-preview">${salePreview()}</div><button class="primary block mt12" data-action="purchase">✓ Zatwierdź zakup demonstracyjny</button><p class="fine">Rabat dotyczy tylko produktów regularnych. Bony pomniejszają łączną kwotę po rabacie. System dobiera najwyższy poziom możliwy do uzyskania już podczas zakupu.</p></div>`}
+function redeemAdmin(){return `<div class="panel"><h3 style="margin:0">Sprawdź kod nagrody</h3><p class="fine">Wpisz kod tekstowy pod QR klienta. W prawdziwej aplikacji sprzedawca zeskanuje go czytnikiem.</p><label class="field-label">Kod nagrody</label><input class="field" id="lookup-code" placeholder="Np. CR-REW-..." value="${esc(ui.lookup)}" data-lookup><button class="secondary block mt12" data-action="lookup">Zweryfikuj kod</button><div id="lookup-result"></div></div>
+ <div class="panel"><b>Ostatnie wymiany</b>${[...state.fishClaims].reverse().slice(0,10).map(c=>`<div class="history-row"><div class="row"><div class="grow"><b>${esc(c.title)}</b><div class="fine code">${esc(c.code)}</div></div><span class="chip ${claimStatus(c)==='ready'?'green':'gray'}">${readableClaimStatus(c)}</span></div></div>`).join('')||'<p class="fine">Brak wymian.</p>'}</div>`}
+function lookupResult(code){const c=state.fishClaims.find(x=>x.code.toUpperCase()===code.trim().toUpperCase());if(!c)return '<div class="notice redish mt12">Nie znaleziono kodu. Sprawdź jego poprawność.</div>';const stat=claimStatus(c);return `<div class="notice ${stat==='ready'?'good':'redish'} mt12"><b>${esc(c.title)}</b><div class="fine code mt8">${esc(c.code)}</div><div class="mt8">Status: <b>${readableClaimStatus(c)}</b></div>${stat==='ready'?`<button class="primary block mt12" data-action="mark-used" data-code="${esc(c.code)}">Oznacz jako wykorzystaną</button>`:'<p class="fine">Tego kodu nie można zrealizować ponownie.</p>'}</div>`}
+function rewardsAdmin(){return `<div class="panel"><div class="row"><h3 style="margin:0">Katalog nagród</h3><button class="primary" data-action="new-reward">+ Dodaj</button></div><div class="fine mt8">Zmiany w nagrodach wpływają na widok klienta w tej przeglądarce.</div>${state.rewards.map(r=>`<div class="history-row"><div class="row"><div class="grow"><b>${esc(r.emoji)} ${esc(r.title)}</b><div class="fine">${r.cost} ryb · ${esc(perAccountLabel(r))}</div><div class="fine">Globalnie: ${r.globalLimit===null?'bez limitu':globalLeft(r)+' z '+r.globalLimit} · ${r.active?'Aktywna':'Wyłączona'}</div></div><button class="tiny-btn" data-action="edit-reward" data-id="${esc(r.id)}">Edytuj</button></div></div>`).join('')}</div>${ui.draft?rewardForm():''}`}
+function rewardForm(){const d=ui.draft;return `<div class="panel" id="reward-form"><h3 style="margin-top:0">${ui.editId?'Edytuj nagrodę':'Nowa nagroda'}</h3>
+ <label class="field-label">Nazwa nagrody</label><input class="field" data-draft="title" value="${esc(d.title)}" placeholder="Np. Bon na 10 zł"><label class="field-label">Opis</label><textarea class="field" data-draft="description" rows="3">${esc(d.description)}</textarea><div class="fields2"><div><label class="field-label">Koszt w rybach</label><input class="field" type="number" min="1" step="1" data-draft="cost" value="${esc(d.cost)}"></div><div><label class="field-label">Ikona / emoji</label><input class="field" data-draft="emoji" value="${esc(d.emoji)}"></div></div>
+ <div class="fields2"><div><label class="field-label">Rodzaj</label><select class="field" data-draft="kind">${[['voucher','Bon kwotowy'],['product','Produkt / nagroda'],['bonus','Bonus / usługa']].map(([k,v])=>`<option value="${k}" ${d.kind===k?'selected':''}>${v}</option>`).join('')}</select></div><div><label class="field-label">Kwota bonu (zł)</label><input class="field" type="number" min="0" step="0.01" data-draft="value" value="${esc(d.value)}"></div></div>
+ <label class="field-label">Zdjęcie nagrody (opcjonalnie)</label><input class="field" style="padding:10px" type="file" accept="image/png,image/jpeg,image/webp" data-reward-photo><p id="reward-img-preview" class="fine">${d.imageData?"✓ Dodano zdjęcie nagrody":"Możesz wgrać zdjęcie z telefonu lub komputera. Zostanie pomniejszone do wersji demo."}</p>
+ <hr class="divider"><b>Limit na jedno konto</b><label class="field-label">Rodzaj limitu</label><select class="field" data-draft="perAccount"><option value="unlimited" ${d.perAccount==='unlimited'?'selected':''}>Bez limitu</option><option value="lifetime" ${d.perAccount==='lifetime'?'selected':''}>1 raz na całe konto</option><option value="period" ${d.perAccount==='period'?'selected':''}>X razy w ciągu Y dni</option></select><div class="fields2"><div><label class="field-label">Liczba wymian (X)</label><input class="field" type="number" min="1" step="1" data-draft="limitCount" value="${esc(d.limitCount)}"></div><div><label class="field-label">Okres w dniach (Y)</label><input class="field" type="number" min="1" step="1" data-draft="limitDays" value="${esc(d.limitDays)}"></div></div>
+ <hr class="divider"><b>Limit globalny</b><label class="field-label">Łączna pula (puste = bez limitu)</label><input class="field" type="number" min="1" step="1" data-draft="globalLimit" placeholder="Np. 10" value="${d.globalLimit===null?'':esc(d.globalLimit)}"><p class="fine">Wydana sztuka nie wraca do puli, nawet gdy nagroda wygaśnie.</p><label class="field-label">Ważność po wymianie w dniach (puste = bezterminowo)</label><input class="field" type="number" min="1" step="1" data-draft="validDays" placeholder="Np. 30" value="${d.validDays===null?'':esc(d.validDays)}"><label class="check"><input type="checkbox" data-draft-check="active" ${d.active?'checked':''}>Nagroda aktywna i widoczna w katalogu</label>
+ <button class="primary block mt12" data-action="save-reward">Zapisz nagrodę</button><button class="secondary block mt8" data-action="cancel-edit">Anuluj</button></div>`}
+function tiersAdmin(){return `<div class="panel"><h3 style="margin-top:0">Poziomy i rabaty</h3><p class="fine">W tym demo możesz edytować nazwy poziomów, wymagane punkty i rabaty. Nie przeliczamy wstecz starych paragonów.</p>${state.tiers.map((t,i)=>`<div class="history-row"><b>${TIER_EMOJI[i]} Próg ${i+1}</b><label class="field-label">Nazwa</label><input class="field" id="tier-name-${i}" value="${esc(t.name)}"><div class="fields2"><div><label class="field-label">Punkty od</label><input class="field" type="number" min="0" step="1" id="tier-min-${i}" value="${t.min}" ${i===0?'readonly':''}></div><div><label class="field-label">Rabat (%)</label><input class="field" type="number" min="0" max="100" step="0.01" id="tier-disc-${i}" value="${t.discount}"></div></div></div>`).join('')}<button class="primary block mt12" data-action="save-tiers">Zapisz zmiany progów</button></div>`}
+function returnsAdmin(){const eligible=[...state.purchases].reverse();return `<div class="panel"><h3 style="margin-top:0">Zwrot towaru — demo</h3><p class="fine">Wybierz paragon i wpisz kwotę zwrotu. Punkty oraz ryby za ten paragon zostaną skorygowane. Jeżeli klient już wydał ryby, może powstać ujemne saldo (dług ryb).</p>${eligible.length?`<label class="field-label">Paragon</label><select class="field" id="refund-purchase">${eligible.map(p=>`<option value="${esc(p.id)}">${esc(p.id)} · ${formatDate(dateAt(p.date))} · pozostało ${cash(effectivePaid(p))}</option>`).join('')}</select><label class="field-label">Kwota zwrotu (zł)</label><input class="field" id="refund-amount" type="number" min="0.01" step="0.01" placeholder="Np. 50.00"><button class="secondary block mt12" data-action="refund">↩ Potwierdź zwrot demonstracyjny</button>`:'<div class="empty">Brak zakupów.</div>'}</div>`}
+function render(){const pages={start:startPage,karta:kartaPage,nagrody:fishRewardPage,'moje-nagrody':myRewardsPage,historia:historiaPage,promocje:promocjePage,konto:kontoPage,admin:adminPage};document.getElementById('app').innerHTML=(pages[tab]||pages.start)();const tabForNav=['moje-nagrody'].includes(tab)?'nagrody':['historia'].includes(tab)?'karta':tab==='admin'?'konto':tab;document.querySelectorAll('.nav button').forEach(e=>e.classList.toggle('active',e.dataset.go===tabForNav));}
+function go(target){tab=target;render();window.scrollTo(0,0)}
+function generateCode(){return 'CR-REW-'+Date.now().toString(36).toUpperCase()+'-'+Math.random().toString(36).slice(2,7).toUpperCase()}
+function claimReward(id){const r=getReward(id);if(!r||!r.active)return alert('Nagroda jest niedostępna.');if(fishBalance()<r.cost)return alert('Nie masz wystarczającej liczby ryb.');if(limitInfo(r).blocked)return alert('Osiągnięto limit na konto.');const left=globalLeft(r);if(left!==null&&left<=0)return alert('Wyczerpano limit globalny.');if(!confirm(`Wymienić ${r.cost} ryb na „${r.title}”? Wydane ryby nie wrócą, nawet gdy nagroda wygaśnie.`))return;
+ // All checks repeated for this browser demo; production needs atomic server-side transaction.
+ if(fishBalance()<r.cost||limitInfo(r).blocked||(globalLeft(r)!==null&&globalLeft(r)<=0))return alert('Nagroda jest niedostępna.');
+ state.fishClaims.push({id:'C'+Date.now(),rewardId:r.id,title:r.title,kind:r.kind,value:r.kind==='voucher'?r.value:0,cost:r.cost,code:generateCode(),createdAt:new Date().toISOString(),validDays:r.validDays,usedAt:null});save();go('moje-nagrody');}
+function useCode(code){const c=state.fishClaims.find(x=>x.code===code);if(!c||claimStatus(c)!=='ready')return alert('Kod jest nieprawidłowy, wygasł albo był już użyty.');if(!confirm(`Oznaczyć „${c.title}” jako wykorzystaną nagrodę?`))return;c.usedAt=new Date().toISOString();save();render();}
+function processPurchase(){const c=checkout();if(c.error)return alert(c.error);if(!confirm(`Zatwierdzić testowy zakup ${cash(c.paid)} i przyznać ${pointsText(c.points)} oraz ${c.fish} ryb?`))return;
+ if(c.codes.some(x=>claimStatus(x)!=='ready'))return alert('Jeden z wybranych bonów jest nieaktywny.');
+ const id='P-'+state.nextPurchase++;state.purchases.push({id,date:isoDate(now()),regular:c.R,promo:c.M,discount:c.discAmount,voucher:c.V,paid:c.paid,refund:0,description:'Zakup demonstracyjny'});c.codes.forEach(x=>x.usedAt=new Date().toISOString());ui.selectedCodes=[];save();alert(`Zapisano paragon ${id}. Dodano ${pointsText(c.points)} i ${c.fish} ryb.`);render();}
+function processRefund(){const p=state.purchases.find(x=>x.id===document.getElementById('refund-purchase')?.value),input=Number(document.getElementById('refund-amount')?.value);if(!p||!Number.isFinite(input)||input<=0)return alert('Wpisz poprawną kwotę zwrotu.');const amount=dec(input);if(amount>effectivePaid(p))return alert('Kwota zwrotu nie może przekroczyć pozostałej wartości paragonu.');if(!confirm(`Skorygować paragon ${p.id} o ${cash(amount)}?`))return;p.refund=dec((p.refund||0)+amount);p.refundDate=isoDate(now());save();render();}
+function createDraft(r){return r?{...r}:{id:'R'+Date.now(),title:'',kind:'voucher',value:10,cost:50,emoji:'🎁',description:'',perAccount:'unlimited',limitCount:1,limitDays:30,globalLimit:null,validDays:null,active:true}}
+function saveReward(){const d=ui.draft;if(!d)return;if(!d.title.trim())return alert('Podaj nazwę nagrody.');const cost=+d.cost,limitCount=+d.limitCount,limitDays=+d.limitDays,value=+d.value;if(!Number.isInteger(cost)||cost<1)return alert('Koszt w rybach musi być dodatnią liczbą całkowitą.');if(!Number.isInteger(limitCount)||limitCount<1||!Number.isInteger(limitDays)||limitDays<1)return alert('Niepoprawne limity na konto.');if(d.kind==='voucher'&&(!Number.isFinite(value)||value<=0))return alert('Podaj dodatnią wartość bonu.');if(d.globalLimit!==null&&(!Number.isInteger(+d.globalLimit)||+d.globalLimit<1))return alert('Globalna pula musi być dodatnią liczbą całkowitą.');if(d.validDays!==null&&(!Number.isInteger(+d.validDays)||+d.validDays<1))return alert('Ważność nagrody musi być dodatnią liczbą całkowitą.');
+ const claimed=state.fishClaims.filter(c=>c.rewardId===d.id).length;if(d.globalLimit!==null&&+d.globalLimit<claimed)return alert(`Limit globalny nie może być mniejszy niż liczba już wydanych nagród (${claimed}).`);
+ d.cost=cost;d.value=dec(value);d.limitCount=limitCount;d.limitDays=limitDays;d.globalLimit=d.globalLimit===null?null:+d.globalLimit;d.validDays=d.validDays===null?null:+d.validDays;d.title=d.title.trim();d.description=d.description.trim();d.emoji=d.emoji||'🎁';
+ if(ui.editId){const idx=state.rewards.findIndex(r=>r.id===ui.editId);if(idx>=0)state.rewards[idx]=d}else state.rewards.push(d);ui.draft=null;ui.editId=null;save();render();alert('Zapisano nagrodę w demonstracyjnym katalogu.');}
+function saveTiers(){const tiers=[];for(let i=0;i<5;i++){const name=document.getElementById('tier-name-'+i).value.trim(),min=Number(document.getElementById('tier-min-'+i).value),discount=Number(document.getElementById('tier-disc-'+i).value);if(!name||!Number.isInteger(min)||min<0||!Number.isFinite(discount)||discount<0||discount>100)return alert('Sprawdź nazwy, punkty i rabaty.');if(i===0&&min!==0)return alert('Pierwszy poziom musi zaczynać się od zera.');if(i>0&&min<=tiers[i-1].min)return alert('Kolejne poziomy muszą mieć rosnącą liczbę punktów.');tiers.push({name,min,discount})}state.tiers=tiers;save();render();alert('Zapisano progi w demonstracyjnym programie.');}
+function updatePreview(){const el=document.getElementById('sale-preview');if(el)el.innerHTML=salePreview()}
+document.addEventListener('click',async e=>{const b=e.target.closest('[data-go],[data-admin],[data-action]');if(!b)return;if(b.dataset.go){go(b.dataset.go);return}if(b.dataset.admin){adminTab=b.dataset.admin;render();return}const action=b.dataset.action;
+ if(action==='claim')claimReward(b.dataset.id);
+ else if(action==='copy'){try{await navigator.clipboard.writeText(b.dataset.code);alert('Skopiowano kod nagrody.')}catch(e){prompt('Skopiuj kod:',b.dataset.code)}}
+ else if(action==='reset'){if(confirm('Czy na pewno usunąć wszystkie testowe operacje i przywrócić przykładowe dane?')){state=fresh();ui={selectedCodes:[],saleRegular:'300',salePromo:'100',lookup:'',editId:null,draft:null};save();go('start')}}
+ else if(action==='purchase')processPurchase();else if(action==='refund')processRefund();
+ else if(action==='lookup'){const el=document.getElementById('lookup-result');if(el)el.innerHTML=lookupResult(ui.lookup)}
+ else if(action==='mark-used')useCode(b.dataset.code);
+ else if(action==='new-reward'){ui.editId=null;ui.draft=createDraft();render();document.getElementById('reward-form')?.scrollIntoView({behavior:'smooth',block:'start'})}
+ else if(action==='edit-reward'){ui.editId=b.dataset.id;ui.draft=createDraft(getReward(ui.editId));render();document.getElementById('reward-form')?.scrollIntoView({behavior:'smooth',block:'start'})}
+ else if(action==='save-reward')saveReward();else if(action==='cancel-edit'){ui.editId=null;ui.draft=null;render()}
+ else if(action==='save-tiers')saveTiers();
+});
+document.addEventListener('input',e=>{const el=e.target;if(el.dataset.sale==='regular'){ui.saleRegular=el.value;updatePreview()}if(el.dataset.sale==='promo'){ui.salePromo=el.value;updatePreview()}if(el.hasAttribute('data-lookup'))ui.lookup=el.value;if(el.hasAttribute('data-draft')&&ui.draft){const k=el.dataset.draft;ui.draft[k]=(k==='globalLimit'||k==='validDays')?(el.value===''?null:el.value):el.value;}});
+document.addEventListener('change',e=>{const el=e.target;if(el.hasAttribute('data-reward-photo')){const f=el.files&&el.files[0];if(f&&ui.draft){if(!/^image\/(png|jpeg|webp)$/.test(f.type)||f.size>8000000){alert('Wybierz zdjęcie JPG, PNG lub WebP o wielkości do 8 MB.');return}const u=URL.createObjectURL(f),pic=new Image();pic.onload=()=>{try{const cnv=document.createElement('canvas'),scale=Math.min(1,360/Math.max(pic.width,pic.height));cnv.width=Math.max(1,Math.round(pic.width*scale));cnv.height=Math.max(1,Math.round(pic.height*scale));cnv.getContext('2d').drawImage(pic,0,0,cnv.width,cnv.height);ui.draft.imageData=cnv.toDataURL('image/jpeg',0.75);const q=document.getElementById('reward-img-preview');if(q)q.textContent='✓ Zdjęcie dodane do nagrody. Zapisz nagrodę.';}catch(e){alert('Nie udało się odczytać zdjęcia.')}finally{URL.revokeObjectURL(u)}};pic.onerror=()=>{URL.revokeObjectURL(u);alert('Nie udało się otworzyć zdjęcia.')};pic.src=u;}return}if(el.hasAttribute('data-coupon')){ui.selectedCodes=el.checked?[...new Set([...ui.selectedCodes,el.dataset.coupon])]:ui.selectedCodes.filter(x=>x!==el.dataset.coupon);updatePreview()}if(el.hasAttribute('data-draft-check')&&ui.draft)ui.draft[el.dataset.draftCheck]=el.checked;});
+document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.matches('[data-go]'))go(e.target.dataset.go)});
+render();
+
+</script>
+</body></html>

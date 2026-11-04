@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#101014">
-<title>CarpRide Club — demo v12.3 · dopracowana wędka i spławik</title>
+<title>CarpRide v12.5 TECH Club — demo v12.3 · dopracowana wędka i spławik</title>
 <style>
 :root{--bg:#101014;--surface:#1c1c21;--surface2:#25252c;--border:#393940;--red:#e12631;--red2:#ff5b64;--txt:#f7f7f8;--muted:#afb0ba;--green:#72d6a2;--gold:#efc96e;--warn:#f1c47e;--radius:17px}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--txt);font:15px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.48}input,select,textarea{accent-color:var(--red)}main{max-width:580px;margin:0 auto;padding:18px 17px 112px}header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:5px 0 24px}.brand{font-size:28px;font-weight:950;font-style:italic;letter-spacing:.4px;white-space:nowrap}.brand span,.red{color:var(--red2)}.sub{color:var(--muted);font-size:10px;letter-spacing:1px}.tag{border:1px solid var(--red);color:var(--red2);font-size:10px;font-weight:850;border-radius:7px;padding:7px 10px}.hero{padding:25px 22px;border-radius:19px;background:linear-gradient(135deg,#44232b,#1c1c22 75%);border:1px solid #56343e;position:relative;overflow:hidden}.hero:after{content:'🎣';position:absolute;bottom:0;right:-3px;font-size:95px;opacity:.13;pointer-events:none}.hero .eyebrow{color:#ff969d;font-size:10px;letter-spacing:1.9px;font-weight:850}.hero h1{font-size:31px;line-height:1.08;margin:14px 0}.hero p{color:#ded4d7;max-width:300px;margin:0 0 8px}.primary,.secondary,.ghost,.danger-btn{border-radius:10px;padding:13px 16px;font-weight:800;min-height:45px;display:inline-flex;align-items:center;justify-content:center;gap:8px}.primary{color:white;background:var(--red);border:1px solid var(--red)}.primary:hover:not(:disabled){background:#bd1924}.secondary{background:#292931;color:#f8f8f9;border:1px solid #55545d}.ghost{background:transparent;color:#f2f2f5;border:1px solid #575761}.danger-btn{background:transparent;color:#ff8189;border:1px solid #8b3a43}.tiny-btn{border:1px solid #5e5d66;background:#292931;color:white;padding:8px 11px;border-radius:8px;font-size:12px;font-weight:700}.link-btn{border:none;color:var(--red2);background:none;padding:7px 0;font-size:12px;font-weight:850}.block{width:100%}.mt8{margin-top:8px}.mt12{margin-top:12px}.mt16{margin-top:16px}.mb8{margin-bottom:8px}.section{display:flex;align-items:center;justify-content:space-between;gap:15px;margin:24px 0 10px}.section h2{margin:0;font-size:19px}.panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:17px;margin:11px 0}.muted{color:var(--muted)}.small{font-size:11px}.xs{font-size:10px}.strong{font-weight:800}.label{font-size:11px;font-weight:850;letter-spacing:.8px;text-transform:uppercase;color:var(--muted)}.value{font-size:38px;font-weight:900;line-height:1.05;letter-spacing:-1px}.value .suffix{font-size:15px;font-weight:700;color:var(--red2)}.fine{font-size:11px;color:var(--muted);line-height:1.55}.row{display:flex;align-items:center;justify-content:space-between;gap:12px}.grow{flex:1;min-width:0}.chip{display:inline-flex;align-items:center;gap:5px;border:1px solid #5a454a;border-radius:999px;padding:5px 9px;background:#3b262b;color:#ffa2a8;font-size:11px;font-weight:750}.chip.gray{background:#292931;border-color:#4b4b56;color:#d9d9df}.chip.green{background:#1f3930;border-color:#326e51;color:#b1f0d0}.chip.gold{background:#383024;border-color:#7b6438;color:#f5d490}.chip.wrap{white-space:normal}.title{font-size:28px;margin:0 0 6px;font-weight:850}.page-intro{font-size:13px;color:var(--muted);margin:0 0 17px}.metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.metric{background:var(--surface2);border-radius:12px;padding:14px}.metric .num{font-size:27px;font-weight:850;margin:4px 0}.bar{height:10px;background:#3c3c45;border-radius:100px;overflow:hidden}.bar .filled{height:100%;background:linear-gradient(90deg,#b71723,#fa3945);border-radius:100px}.bar.gold .filled{background:linear-gradient(90deg,#c59536,#efc96e)}.tier-row{display:flex;align-items:center;gap:11px;padding:12px 0;border-bottom:1px solid #36363f}.tier-row:last-child{border-bottom:none}.tier-icon{width:44px;height:44px;display:grid;place-items:center;font-size:24px;border-radius:12px;background:#2a2a31;flex:0 0 auto}.tier-row.current .tier-icon{background:#52262b}.tier-name{font-size:13px;font-weight:800}.tier-range{font-size:11px;color:var(--muted)}.tier-discount{font-size:19px;font-weight:900}.card{background:linear-gradient(145deg,#d92632,#8b1019);padding:20px 20px 16px;border-radius:18px;box-shadow:0 9px 28px #0005}.card-header,.card-footer{display:flex;align-items:center;justify-content:space-between;gap:10px}.card-logo{font-size:23px;font-style:italic;font-weight:950}.card-logo span{color:#ffd6d9}.qr-slot{min-height:140px;margin:19px 0;padding:20px;border:2px dashed #ffffff82;border-radius:12px;background:#ffffff0d;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;text-align:center}.qr-slot .big-qr{font-size:39px}.qr{display:grid;width:184px;height:184px;place-items:center;background:#fff;padding:9px;border-radius:12px;margin:12px auto 4px}.qr svg{width:100%;height:100%;shape-rendering:crispEdges}.code{font-family:ui-monospace,Menlo,Consolas,monospace;letter-spacing:1px;overflow-wrap:anywhere;font-size:12px}.reward-card{display:flex;flex-direction:column;gap:11px}.reward-top{display:flex;align-items:flex-start;gap:12px}.reward-icon{width:64px;height:64px;flex:0 0 auto;border-radius:14px;background:#2a2a31;display:grid;place-items:center;font-size:30px}.reward-icon img{width:100%;height:100%;object-fit:cover;border-radius:14px}.reward-name{font-weight:850;font-size:15px}.reward-cost{font-weight:900;color:#f9e3a0}.chips{display:flex;flex-wrap:wrap;gap:6px}.line{height:1px;background:#373740;margin:12px 0}.field{width:100%;background:#26262d;border:1px solid #4a4a55;color:#fff;border-radius:10px;padding:12px 13px;outline:none;min-height:45px}.field:focus{border-color:#fa5561;box-shadow:0 0 0 2px #e1263129}.field-label{display:block;font-size:11px;font-weight:800;color:#b9bac1;margin:12px 0 5px}.fields2{display:grid;grid-template-columns:1fr 1fr;gap:10px}.check{display:flex;align-items:center;gap:9px;padding:8px 0;font-size:13px}.check input{width:17px;height:17px;flex:0 0 auto}.success{color:var(--green)}.warning{color:var(--warn)}.error{color:#ff8f94}.notice{padding:12px 13px;border-radius:11px;background:#26262e;border:1px solid #45454f;color:#dedee1;font-size:12px;line-height:1.55}.notice.redish{border-color:#73454c;background:#342126}.notice.good{border-color:#335d47;background:#1c3228}.tabs{display:flex;gap:8px;overflow-x:auto;padding:2px 0 10px;scrollbar-width:none}.tabs button{white-space:nowrap;color:#c1c1ca;background:#25252c;border:1px solid #43434c;border-radius:999px;padding:10px 12px;font-weight:700;font-size:12px}.tabs button.active{background:#5f222b;border-color:#af303b;color:white}.nav{position:fixed;left:0;right:0;bottom:0;background:#18181deF;border-top:1px solid #3e3e46;padding:10px 8px calc(10px + env(safe-area-inset-bottom));backdrop-filter:blur(16px);z-index:10}.nav-inner{max-width:580px;margin:auto;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px}.nav button{background:none;border:none;color:#a8a8b2;font-size:11px;padding:3px 2px}.nav button b{display:block;font-size:22px;margin-bottom:2px}.nav button.active{color:#ff5b64;font-weight:800}.logo{max-width:180px;max-height:90px;display:block;object-fit:contain;margin:0 auto 14px}.foot{margin:24px 4px 12px;color:#85858e;font-size:11px;text-align:center}.history-row{border-bottom:1px solid #34343c;padding:12px 0}.history-row:last-child{border-bottom:none}.history-dot{font-size:19px;margin-right:8px}.flex-col{display:flex;flex-direction:column;gap:3px}.mini-stat{font-size:12px;font-weight:750}.two-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.admin-head{display:flex;gap:8px;margin:0 0 16px}.pillcount{padding:3px 8px;border-radius:8px;background:#3d2a2e;color:#ffaab0;font-size:12px;font-weight:800}.reward-filters{display:flex;gap:7px;flex-wrap:wrap}.empty{text-align:center;padding:30px 15px;color:#adaeb6;border:1px dashed #4a4a53;border-radius:12px}.divider{border:0;border-top:1px solid #393943;margin:16px 0}.note-icon{width:44px;height:44px;flex:0 0 auto;display:grid;place-items:center;border-radius:10px;background:#33262a;font-size:24px}.calm{color:#e8d7b0}.demo-stamp{border:1px dashed #735156;color:#e7abb0;border-radius:10px;padding:9px;text-align:center;font-weight:750;font-size:11px;margin:18px 0 2px}.hidden{display:none!important}@media(min-width:700px){main{padding-top:26px}.hero{padding:30px 25px}}@media(max-width:370px){.brand{font-size:24px}.value{font-size:34px}.metric-grid{gap:7px}.metric{padding:11px}.tier-icon{width:37px;height:37px;font-size:21px}}
@@ -1995,7 +1995,7 @@ function fishGameUpdateFight(dt,t){const g=fishGameFight;if(!g)return;g.elapsed+
 let fishGameReelAngle=2.25; // v12.1: handle rotates only while the player reels
 function fishGameFrame(t){if(tab!=='gra'||!document.getElementById('fg11-canvas')){fishGameRAF=null;return}
  const dt=fishGameLastTime?Math.min(.045,(t-fishGameLastTime)/1000):0;fishGameLastTime=t;
- if(fishGamePhase==='fighting' && fishGameHold)fishGameReelAngle=(fishGameReelAngle+dt*9.4)%(Math.PI*2);
+ if(fishGamePhase==='fighting' && fishGameHold)fishGameReelAngle=(fishGameReelAngle-dt*9.4+Math.PI*2)%(Math.PI*2);
  if(fishGamePhase==='fighting')fishGameUpdateFight(dt,t);
  fishGameDraw(t);
  fishGameRAF=requestAnimationFrame(fishGameFrame)
@@ -2020,17 +2020,44 @@ function v124CastAngle(t){
  if(u<.69)return -.19+.37*(.5-.5*Math.cos(Math.PI*(u-.31)/.38));
  return .18*(1-(u-.69)/.31);
 }
+// v12.5 TECH: bezszwowe ugięcie blanku. Kierunek stycznej przy dolniku
+// nie zmienia się skokowo przy obciążeniu: ciągłość C1 na mocowaniu.
 function v124RodCurve(phase,game,t){
  const fight=phase==='fighting'&&game;
  const level=fight?game.species.level:0;
- const load=fight?Math.min(1,.14+level*.075+(game.tension||0)*.0043+(game.pullLeft>0?.05:0)):.07;
- const hookKick=fight&&game.elapsed<.45?Math.sin(Math.PI*game.elapsed/.45)*(1-game.elapsed/.45):0;
- const shake=fight?(1+level*.27)*Math.sin(t*(7.2+level*.44))+(game.pullLeft>0?1.45*Math.sin(t*24):0):.45*Math.sin(t*1.4);
- return {p0:{...v124Anchor},
- p1:{x:283-10*load,y:211-63*load},
- p2:{x:210-24*load,y:164-72*load},
- p3:{x:137-65*load+shake-9*hookKick,y:155+115*load+shake*.28-32*hookKick},load};
+ const tension=fight?(game.tension||0):0;
+ const load=fight?Math.min(1,.10+level*.072+tension*.0047+(game.pullLeft>0?.075:0)):.065;
+ const kick=fight&&game.elapsed<.40?Math.sin(Math.PI*game.elapsed/.40)*(1-game.elapsed/.40):0;
+ const surge=fight&&game.pullLeft>0 ? Math.sin(t*20)*(.9+level*.18) : 0;
+ const tremor=fight?Math.sin(t*(4.9+level*.25))*(.45+level*.17):.22*Math.sin(t*1.5);
+ return {
+  p0:{...v124Anchor},
+  // p0 -> p1 leży na przedłużeniu wklejonego w dolnik fragmentu blanku.
+  // Pozostaje wspólny dla całej krzywej; NIE ma tutaj 'zawiasu'.
+  p1:{x:281,y:208},
+  // Ugięcie rośnie stopniowo w kierunku szczytówki.
+  p2:{x:208-26*load,y:163+24*load},
+  p3:{x:143-48*load+tremor+surge-5*kick,
+      y:153+111*load+tremor*.28-25*kick},
+  load
+ };
 }
+// Cały zestaw (dolnik + kołowrotek + blank) obraca się wokół punktu
+// oparcia uchwytu. Dzięki temu dolnik i szczytówka poruszają się RAZEM.
+const v125Pivot={x:435,y:433};
+function v125WholeRodAngle(phase,game,t,ms){
+ const fight=phase==='fighting'&&game;
+ if(phase==='casting')return v124CastAngle(ms)*1.20;
+ if(fight){
+  const level=game.species.level;
+  const strength=.020+level*.005;
+  const drag=game.pullLeft>0? .020*Math.sin(t*15):0;
+  const retrieve=fishGameHold?.012*Math.sin(t*6.5):-0.006;
+  return -strength*Math.sin(t*2.8)+.013*Math.sin(t*5.7+1.3)+drag+retrieve;
+ }
+ return .007*Math.sin(t*1.45);
+}
+
 function v124Bezier(b,u){const v=1-u;return {x:v*v*v*b.p0.x+3*v*v*u*b.p1.x+3*v*u*u*b.p2.x+u*u*u*b.p3.x,y:v*v*v*b.p0.y+3*v*v*u*b.p1.y+3*v*u*u*b.p2.y+u*u*u*b.p3.y};}
 function v124Tangent(b,u){const v=1-u;return {x:3*v*v*(b.p1.x-b.p0.x)+6*v*u*(b.p2.x-b.p1.x)+3*u*u*(b.p3.x-b.p2.x),y:3*v*v*(b.p1.y-b.p0.y)+6*v*u*(b.p2.y-b.p1.y)+3*u*u*(b.p3.y-b.p2.y)};}
 function v124Normal(b,u){const d=v124Tangent(b,u),m=Math.hypot(d.x,d.y)||1;return {x:d.y/m,y:-d.x/m};}
@@ -2081,7 +2108,7 @@ function fishGameDraw(t){
  const phase=fishGamePhase,sec=t/1000,g=fishGameFight,f=g?.species;
  const fighting=phase==='fighting'&&Boolean(g);
  const rod=v124RodCurve(phase,g,sec),guides=v124Guides(rod),tip=v124Bezier(rod,1);
- const angle=v124CastAngle(t)+(fighting?(0.011*Math.sin(sec*7.3)+(g.pullLeft>0?.012*Math.sin(sec*23):0)):phase==='waiting'?.005*Math.sin(sec*1.9):0);
+ const angle=v125WholeRodAngle(phase,g,sec,t);
  let target=null,opacity=1;
  if(['waiting','nibble','bite','casting'].includes(phase)){
   let bx=87,by=301;
@@ -2099,15 +2126,20 @@ function fishGameDraw(t){
  if(fighting){fishGameWaterRipple(c,fishX,fishY,sec*2.1,1.25+f.level*.11);fishGameWaterSplash(c,fishX,fishY,sec,f.level,g.pullLeft>0);target={x:fishX,y:fishY};opacity=.92;}
  if(phase==='won')fishGameWaterSplash(c,96,296,sec,3,false);
  // Zewnętrzny odcinek żyłki kończy się w PRAWDZIWYM ruchomym szczytowym punkcie.
- const movingTip=v124RotPoint(tip,angle,v124Anchor);
+ const movingTip=v124RotPoint({x:guides[guides.length-1].x,y:guides[guides.length-1].y},angle,v125Pivot);
  if(target)v124Line(c,[movingTip,target],opacity);
  if(target&&['waiting','nibble','bite','casting'].includes(phase)&&!(phase==='bite'&&(t-fishGameBiteTime)>260))v124Bobber(c,target.x,target.y,phase==='casting'?.85:1,sec);
  // Blank, dolnik, kołowrotek i przelotki obracają się razem podczas zamachu.
- c.save();c.translate(v124Anchor.x,v124Anchor.y);c.rotate(angle);c.translate(-v124Anchor.x,-v124Anchor.y);
+ c.save();c.translate(v125Pivot.x,v125Pivot.y);c.rotate(angle);c.translate(-v125Pivot.x,-v125Pivot.y);
  v124Shaft(c,rod);v124Mounts(c,guides);
  v124Asset(c,v124Base);
- const fromSpool={x:258,y:302};
- v124Line(c,[fromSpool,...guides.map(q=>({x:q.x,y:q.y})),tip],target?opacity:.9);
+ const lineRoller={x:v124BaseSize.x+1005*v124BaseSize.s,y:v124BaseSize.y+477*v124BaseSize.s};
+ // Jedyna widoczna linka zaczyna się na ROLCE żyłki obok kabłąka
+ // i przechodzi przez środki wszystkich przelotek.
+ v124Line(c,[lineRoller,...guides.map(q=>({x:q.x,y:q.y}))],target?opacity:.95);
+ // Obwódka małego metalowego kółka rolki (na oryginalnej grafice źródłowej).
+ c.save();c.beginPath();c.arc(lineRoller.x,lineRoller.y,2.0,0,Math.PI*2);
+ c.fillStyle='#1b252d';c.fill();c.lineWidth=.95;c.strokeStyle='#d6ba75';c.stroke();c.restore();
  v124ReelCrank(c);
  v124RingFaces(c,guides);
  c.restore();
